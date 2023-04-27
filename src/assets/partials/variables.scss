@@ -1,0 +1,266 @@
+/* ----- COULEURS DU LOGO ---- */
+
+// BLEU LOGO : 
+$BLEUP :#203C81;
+
+// GRIS LOGO : 
+$GRISP :#848585;
+
+
+/* ----- DECLINAISONS DU GRIS LOGO ---- */
+
+
+$GDEC1: #F1F1F1;
+$GDEC2: #E3E3E3;
+$GDEC3: #D6D6D6;
+$GDEC4: #C8C8C8;
+$GDEC5: #BABBBB;
+$GDEC6: #ADADAD;
+$GDEC7: #9FA0A0;
+$GDEC8: #919292;
+$GDEC9: #757676;
+$GDEC10: #666767;
+$GDEC11: #585858;
+$GDEC12: #494949;
+$GDEC13: #3A3B3B;
+$GDEC14: #2C2C2C;
+$GDEC15: #1D1D1D;
+$GDEC16: #0E0E0E;
+
+/* ----- DECLINAISONS DU BLEU LOGO ---- */
+
+
+$BDEC1: #E6E9F1;
+$BDEC2: #CDD3E3;
+$BDEC3: #B4BED5;
+$BDEC4: #9BA8C7;
+$BDEC5: #8392B9;
+$BDEC6: #6A7DAB;
+$BDEC7: #51679D;
+$BDEC8: #38518F;
+$BDEC9: #1C3572;
+$BDEC10: #182E64;
+$BDEC11: #152856;
+$BDEC12: #112147;
+$BDEC13: #0E1A39;
+$BDEC14: #0A142B;
+$BDEC15: #070D1C;
+$BDEC16: #03060E;
+
+
+
+/* ----- COULEURS DES GAMMES ---- */
+
+
+// GAMME FOURNITURES DE BUREAU : 
+$FOB :#3498A8;
+
+// GAMME FOURNITURES SCOLAIRES :
+$FOS :#DB3938;
+
+// GAMME MOBILIER DE BUREAU
+$MOB :#7F4C99;
+
+// GAMME TOUT TYPES DE PAPIERS & CARTONS : 
+$PC :#E1823A;
+
+// GAMME SOLUTIONS D'ARCHIVAGES : 
+$SA :#B68510;
+
+// GAMME SUPPORT D'IMPRESSIONS NUMERIQUES : 
+$SIN :#30A636;
+
+
+/* ----- LES TYPOGRAPHIES ---- */
+
+// IMPORT DU PROJET ADOBE FONTS
+@import url("https://use.typekit.net/sjf3yjy.css");
+
+
+/* ----- LES MIXINS DE LA TYPO LATO ---- */
+
+// MIXIN TYPO LATO HAIRLINE
+@mixin LatoHairline {
+    font-family: "lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+// MIXIN TYPO LATO HAIRLINE ITALIC
+@mixin LatoHairlineItalic {
+    font-family: "lato", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+// MIXIN TYPO LATO THIN
+@mixin LatoThin {
+    font-family: "lato", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+// MIXIN TYPO LATO THIN ITALIC
+@mixin LatoThinItalic {
+    font-family: "lato", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+// MIXIN TYPO LATO LIGHT
+@mixin LatoLight {
+    font-family: "lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+// MIXIN TYPO LATO LIGHT ITALIC
+@mixin LatoLightItalic {
+    font-family: "lato", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+// MIXIN TYPO LATO REGULAR
+@mixin LatoRegular {
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+// MIXIN TYPO LATO ITALIC
+@mixin LatoItalic {
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+// MIXIN TYPO LATO MEDIUM
+@mixin LatoMedium {
+    font-family: "lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+// MIXIN TYPO LATO MEDIUM ITALIC
+@mixin LatoMediumItalic {
+    font-family: "lato", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+// MIXIN TYPO LATO SEMIBOLD
+@mixin LatoSemibold {
+    font-family: "lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+// MIXIN TYPO LATO SEMIBOLD ITALIC
+@mixin LatoSemiboldItalic {
+    font-family: "lato", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+// MIXIN TYPO LATO BOLD
+@mixin LatoBold {
+    font-family: "lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+// MIXIN TYPO LATO BOLD ITALIC
+@mixin LatoBoldItalic {
+    font-family: "lato", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+// MIXIN TYPO LATO HEAVY
+@mixin LatoHeavy {
+    font-family: "lato", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+// MIXIN TYPO LATO HEAVY ITALIC
+@mixin LatoHeavyItalic {
+    font-family: "lato", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+// MIXIN TYPO LATO BLACK
+@mixin LatoBlack {
+    font-family: "lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+// MIXIN TYPO LATO BLACK ITALIC
+@mixin LatoBlackItalic {
+    font-family: "lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+
+/* ----- LES MIXINS DE LA TYPO CALLUNA ---- */
+
+// MIXIN TYPO CALLUNA LIGHT
+@mixin CallunaLight {
+    font-family: "calluna", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+// MIXIN TYPO CALLUNA REGULAR
+@mixin CallunaRegular {
+    font-family: "calluna", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+// MIXIN TYPO CALLUNA ITALIC
+@mixin CallunaItalic {
+    font-family: "calluna", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+// MIXIN TYPO CALLUNA SEMIBOLD
+@mixin CallunaSemiBold {
+    font-family: "calluna", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+// MIXIN TYPO CALLUNA SEMIBOLD ITALIC
+@mixin CallunaSemiBoldItalics {
+    font-family: "calluna", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+// MIXIN TYPO CALLUNA BOLD
+@mixin CallunaBold {
+    font-family: "calluna", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+// MIXIN TYPO CALLUNA BOLD ITALIC
+@mixin CallunaBold {
+    font-family: "calluna", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+// MIXIN TYPO CALLUNA BLACK
+@mixin CallunaBold {
+    font-family: "calluna", serif;
+    font-weight: 900;
+    font-style: normal;
+}

@@ -1,0 +1,341 @@
+footer {
+    z-index: 5;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 130px 50px;
+    transition: ease 0.2s;
+
+    #footer-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $GDEC1;
+
+        .footer-content {
+            width: calc(100% - 54px);
+            height: calc(100% - 20px);
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-row-gap: 20px;
+
+            .for-first-area {
+                display: grid;
+                grid-template-columns: 15% 1fr 10%;
+                grid-column-gap: 15px;
+                align-items: center;
+
+                .menu-element {
+                    display: grid;
+                    grid-template-columns: 32% 32% 32%;
+                    justify-content: space-between;
+                  
+
+                    .section-visible {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        height: fit-content;
+
+                        a {
+                            @include LatoBlack;
+                            color: $BDEC9;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            letter-spacing: 1px;
+                            font-size: 22px;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        a::before {
+                            content: "";
+                            display: inline-block;
+                            background-color: $BDEC9;
+                            width: 0px;
+                            height: 20px;
+                            transition: ease 0.2s;
+                            
+                        }
+                        a:hover:before {
+                            content: "";
+                            display: inline-block;
+                            background-color: $BDEC9;
+                            width: 5px;
+                            height: 20px;
+                            margin-right: 7px;
+                            transition: ease 0.2s;
+                        }
+
+                        p {
+                            @include LatoLight;
+                            color: $BDEC15;
+                            font-size: 15px;
+                            width: 70%;
+                        }
+
+                    }
+                }
+
+                .logo-3D {
+                    
+                    .section-visible {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        align-items: center;
+                        transition: ease 0.2s;
+                        
+
+                        a {
+                            @include LatoBold;
+                            color: $BDEC9;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                            font-size: 12px;
+                            text-align: center;
+                            text-decoration: none;
+                        }
+
+                        svg {
+                            fill: $BDEC9;
+                        }
+                    }
+
+                    .section-visible:hover {
+                        background-color: $BDEC9;
+                        transition: ease 0.2s;
+
+                        svg {
+                            fill: $GDEC1;
+                        }
+                        
+                        a {
+                            color: $GDEC1;
+                        }
+                    }
+
+
+                }
+            }
+
+            .for-second-area {
+                display: none;
+                grid-template-columns: 15% 1fr 10%;
+                grid-column-gap: 15px;
+
+                .under-menu-logo {
+              
+                    .section-hidden {
+                        display: grid;
+                        height: fit-content;
+                        grid-row-gap: 10px;
+
+                        a {
+                            @include LatoMedium;
+                            color: $BDEC15;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                            font-size: 12px;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        a::before {
+                            content: "";
+                            display: inline-block;
+                            background-color: $BDEC15;
+                            width: 0px;
+                            height: 100%;
+                            transition: ease 0.2s;
+                            
+                        }
+                        a:hover:before {
+                            content: "";
+                            display: inline-block;
+                            background-color: $BDEC15;
+                            width: 3px;
+                            height: 100%;
+                            margin-right: 7px;
+                            transition: ease 0.2s;
+                        }
+
+               
+                    }
+                }
+
+                .under-menu-element {
+                 
+                    display: grid;
+                    grid-template-columns: 32% 32% 32%;
+                    justify-content: space-between;
+        
+
+                    .section-hidden {
+                        display: grid;
+                        height: fit-content;
+                        grid-row-gap: 10px;
+
+                        a {
+                            @include LatoMedium;
+                            color: $BDEC15;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                            font-size: 12px;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        a::before {
+                            content: "";
+                            display: inline-block;
+                            background-color: $BDEC15;
+                            width: 0px;
+                            height: 100%;
+                            transition: ease 0.2s;
+                            
+                        }
+                        a:hover:before {
+                            content: "";
+                            display: inline-block;
+                            background-color: $BDEC15;
+                            width: 3px;
+                            height: 100%;
+                            margin-right: 7px;
+                            transition: ease 0.2s;
+                        }
+                    }
+                }
+
+            }
+
+            .for-third-area {
+                display: none;
+                grid-template-columns: 15% 1fr 15%;
+                grid-column-gap: 15px;
+
+                .footer-element {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    @include LatoLight;
+                    font-size: 10px;
+                    color: $BDEC9;
+                    gap: 5px;
+                }
+
+                .shop-element {
+                    display: grid;
+                    grid-template-columns: 32% 66%;
+                    justify-content: space-between;
+                    align-items: end;
+
+                    .adresse-shop {
+                        display: grid;
+                         align-items: flex-end;
+                         @include LatoLight;
+                         font-size: 12px;
+                         color: $BDEC15;
+                         h4 {
+                             color: $BDEC9;
+                             @include LatoRegular;
+                             font-size: 14px;
+                         }
+                     }
+
+                    .horaires {
+                        display: flex;
+                        justify-content: flex-start;
+                        gap: 50px;
+                            .day-horaire {
+                                display: grid;
+                                h5 {
+                                    @include LatoRegular;
+                                    color: $BDEC15;
+                                    margin-bottom: 7px;
+                                }
+                                p {
+                                    display: grid;
+                                    grid-row-gap : 5px;
+                                    @include LatoLight;
+                                    color: $BDEC15;
+                                    font-size: 12px;
+                                }
+                            }
+                        
+                    }
+                }
+
+                .shop-element-bis {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+
+                    .telephone {
+                        display: grid;
+                        h4 {
+                         color: $BDEC9;
+                         @include LatoRegular;
+                         font-size: 14px;
+                     }
+                         .details-tel {
+                             p {
+                                 font-size: 12px;
+                                 color: $BDEC15;
+                                 @include LatoLight;
+                             }
+                             
+                            
+                         }
+                     }
+                }
+            }
+        }
+    }
+
+    
+
+    #footer-bloc-lien-express {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        transition: ease 0.3s;
+
+        .lien-express-1 {
+            @include lien-express;
+            background-color: $GRISP;
+        }
+
+        .lien-express-1:hover {
+            background-color: $GDEC3;
+
+            a {
+                color: $GRISP;
+            }
+        }
+
+        .lien-express-2 {
+            @include lien-express;
+            background-color: $BLEUP;
+        }
+
+    }
+}
+
+footer.hover-footer {
+    grid-template-rows: 420px 50px;
+    #footer-wrapper {
+        .footer-content {
+            .for-second-area {
+                display: grid;
+            }
+            .for-third-area {
+                display: grid;
+            }
+        }
+    }
+
+}

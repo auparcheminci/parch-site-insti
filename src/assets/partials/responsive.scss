@@ -1,0 +1,530 @@
+@media screen and (max-width : 1750px) {}
+
+@media screen and (max-width : 1650px) {
+    #wrapper-catalog {
+        #filters-section {
+            #filters-wrapper {
+                .filters-to-display {
+                    grid-template-columns: 1fr 1fr;
+
+                    #department-filters {
+                        grid-template-columns: none;
+                        grid-template-rows: auto 1fr;
+                        grid-row-gap: 15px;
+
+                        .departement-intro {
+                            gap: 10px;
+                        }
+
+                        .departement-element {
+                            align-content: flex-start;
+
+                        }
+                    }
+
+                    #brand-filters {
+                        grid-template-columns: none;
+                        grid-template-rows: auto 1fr;
+                        grid-row-gap: 15px;
+
+                        .brand-intro {
+                            gap: 10px;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        #wrapper-supplier-catalog {
+            .supplier-card-wrapper {
+                .supplier-catalog-element {
+                    width: 70%;
+                }
+
+            }
+        }
+
+    }
+
+    #wrapper-catalog.hover-filter {
+        grid-template-rows: 320px 1fr;
+
+        #filters-section {
+            #filters-wrapper {
+                .filters-to-display {
+                    display: grid;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1610px ) {
+    #wrapper-about {
+
+        #about-punchline {
+            height: 200px;
+
+        }
+
+    }
+}
+
+@media screen and (max-width : 1600px) {}
+
+
+@media screen and (max-width : 1550px) {}
+
+@media screen and (max-width : 1540px) {
+
+    #wrapper-about {
+
+        #wrapper-about-main-bloc {
+            .element-of-main-bloc {
+                p {
+                    width: 45%;
+                    @include LatoRegular;
+                    color: $BDEC12;
+                }
+
+            }
+
+
+
+        }
+
+    }
+}
+
+@media screen and (max-width : 1450px) {}
+
+@media screen and (max-width : 1410px) {
+
+    #wrapper-about {
+        #about-image {
+            height: 350px;
+        }
+
+    }
+}
+
+
+@media screen and (max-width : 1400px) {}
+
+@media screen and (max-width : 1380px) {
+
+    #wrapper-about {
+        #about-punchline {
+            height: 263px;
+        }
+
+
+        #wrapper-about-main-bloc {
+            .element-of-main-bloc {
+                grid-row-gap: 15px;
+                p {
+                    width: 45%;
+                    @include LatoRegular;
+                    color: $BDEC12;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+@media screen and (max-width : 1360px) {
+
+    #wrapper-about {
+        #about-punchline {
+            height: 263px;
+        }
+
+
+        #wrapper-about-main-bloc {
+            .element-of-main-bloc {
+                .logo-for-trust {
+                    .trust-brand {
+
+                        .items-of-trust-one,
+                        .items-of-trust-two,
+                        .items-of-trust-three {
+                            gap: 10px;
+
+                            p {
+                                width: 80%;
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+    }
+}
+
+
+@media screen and (max-width : 1340px) {
+
+    #wrapper-about {
+        #wrapper-about-main-bloc {
+            .element-of-main-bloc {
+                .logo-for-trust {
+                    .trust-brand {
+
+                        .items-of-trust-one,
+                        .items-of-trust-two,
+                        .items-of-trust-three {
+                            p {
+                                width: 85%;
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    footer {
+        #footer-wrapper {
+            .footer-content {
+                .for-first-area {
+                    grid-template-columns: 20% 1fr 10%;
+                }
+
+                .for-second-area {
+                    grid-template-columns: 20% 1fr 10%;
+                }
+
+                .for-third-area {
+                    grid-template-columns: 20% 1fr 10%;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width : 1285px) {
+
+    #wrapper-about {
+        #wrapper-about-main-bloc {
+            .element-of-main-bloc {
+                .logo-for-trust {
+                    .trust-brand {
+
+                        .items-of-trust-one,
+                        .items-of-trust-two,
+                        .items-of-trust-three {
+                            p {
+                                width: 90%;
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+        #about-punchline {
+            height: 243px;
+        }
+
+    }
+}
+
+@media screen and (max-width : 1255px) {}
+
+
+@media screen and (max-width : 1250px) {
+
+    #wrapper-about {
+        #about-image {
+            height: 300px;
+            width: 35%;
+        }
+
+        #about-punchline {
+            display: none;
+        }
+
+        #wrapper-about-main-bloc {
+            .element-of-main-bloc {
+                grid-row-gap: 50px;
+               .logo-for-trust {
+                .trust-brand {
+                    grid-template-columns : none;
+                    //grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+                    grid-row-gap: 25px;
+                }
+               }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width : 1200px) {}
+
+
+
+@media screen and (max-width : 1157px) {
+
+    #wrapper-about {
+        #about-image {
+            height: 300px;
+            width: 35%;
+        }
+
+        #about-punchline {
+            height: 170px;
+            width: 65%;
+        }
+
+        #wrapper-about-main-bloc {
+            .element-of-main-bloc {
+                p {
+                    width: 55%;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 1130px) {
+    footer {
+        #footer-wrapper {
+            .footer-content {
+                .for-first-area {
+                    .menu-element {
+                        .section-visible {
+                            a {
+                                font-size: 20px;
+                                letter-spacing: 0px;
+                            }
+
+                            p {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    footer {
+        #footer-wrapper {
+            .footer-content {
+                grid-row-gap: 5px;
+
+                .for-first-area {
+                    grid-template-columns: 20% 1fr 10%;
+                }
+
+                .for-second-area {
+                    grid-template-columns: 20% 1fr 10%;
+                }
+
+                .for-third-area {
+                    grid-template-columns: 20% 1fr 10%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    footer {
+        #footer-wrapper {
+            .footer-content {
+                .for-first-area {
+                    .logo-3D {
+                        .section-visible {
+                            a {
+                                letter-spacing: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width : 1045px) {
+
+    #wrapper-about {
+
+        #wrapper-about-main-bloc {
+            .element-of-main-bloc {
+                p {
+                    width: 60%;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width : 1006px) {}
+
+
+@media only screen and (max-width: 1000px) {
+    main {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    #phone-web-version {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        background-image: url("src/assets/images/Fermeturechassisverrezalfjpg_63063fb114e15.jpg");
+        background-size: 100% 100%;
+        background-repeat: repeat;
+
+        .phone-middle {
+            background-color: $BDEC9;
+            width: 70%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .phone-middle-element {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .phone-middle-intro {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+
+                    h2 {
+                        color: $BDEC1;
+                        @include LatoBlack;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+
+                    p {
+                        color: $BDEC1;
+                        @include LatoRegular;
+                        text-align: center;
+                    }
+                }
+
+                .lien-express {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+
+                    .lien-express-catalogue {
+                        background-color: $GRISP;
+                        padding: 20px;
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        justify-content: center;
+                        gap: 10px;
+                        transition: ease 0.2s;
+
+                        i {
+                            color: $BDEC1;
+                            font-size: 20px;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: $BDEC1;
+                        }
+
+                    }
+
+                    .lien-express-catalogue:hover {
+                        transition: ease 0.2s;
+                        background-color: $BDEC1;
+
+                        i {
+                            color: $GRISP;
+                            font-size: 20px;
+                        }
+
+                        a {
+                            color: $GRISP;
+                        }
+                    }
+
+                    .lien-express-whatsapp {
+                        padding: 20px;
+                        background-color: $GDEC7;
+                        display: flex;
+                        width: 100%;
+                        color: $BDEC1;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+
+                        i {
+                            color: $BDEC1;
+                            font-size: 20px;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: $BDEC1;
+                        }
+                    }
+
+                    .lien-express-whatsapp:hover {
+                        transition: ease 0.2s;
+                        background-color: $BDEC1;
+
+                        i {
+                            color:  $GDEC7;
+                            font-size: 20px;
+                        }
+
+                        a {
+                            color:  $GDEC7;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+}
