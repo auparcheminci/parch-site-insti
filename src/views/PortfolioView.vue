@@ -46,10 +46,10 @@ import axios from 'axios';
         <div id="portfolio-card-section">
             <div class="project-card" v-for="project in projects" :key="project.id">
                 <picture>
-                    <source :srcset="`http://localhost:1337` + project.attributes.Carre.data.attributes.url" media="(min-width: 1320px)">
-                    <source :srcset="`http://localhost:1337` + project.attributes.Rectangle.data.attributes.url" media="(min-width: 1150px)">
-                    <source :srcset="`http://localhost:1337` + project.attributes.Carre.data.attributes.url" media="(min-width: 1000px)">
-                    <img :src="`http://localhost:1337` + project.attributes.Carre.data.attributes.url" alt="MDN">
+                    <source :srcset="`https://strapi-z4iu.onrender.com` + project.attributes.Carre.data.attributes.url" media="(min-width: 1320px)">
+                    <source :srcset="`https://strapi-z4iu.onrender.com` + project.attributes.Rectangle.data.attributes.url" media="(min-width: 1150px)">
+                    <source :srcset="`https://strapi-z4iu.onrender.com` + project.attributes.Carre.data.attributes.url" media="(min-width: 1000px)">
+                    <img :src="`https://strapi-z4iu.onrender.coms` + project.attributes.Carre.data.attributes.url" alt="MDN">
                 </picture>
             </div>
         </div>
@@ -97,9 +97,9 @@ export default {
             const optionsr = {
                 method: 'GET',
                 maxBodyLength: Infinity,
-                url: `http://localhost:1337/api/projets?filters[Categories][$eq]=${currentcat}&populate=*`,
+                url: `https://strapi-z4iu.onrender.com/api/projets?filters[Categories][$eq]=${currentcat}&populate=*`,
                 headers: {
-                    'Authorization': 'Bearer d9021206876fa9b96a716c638ca82803a98647a80b81657a0f483a3227f1313138e1754fe19fa4ecca3c402b93a13de6543db152245e5cdfbe4e474820131bfe43c334a8e88bb5773e23567c82fdf6a8ab962a9ed394a2b0181e260f364ac9b9a034c903b852270aab7c58c5e28326b57766a6038aa2e15c678525da3bf2f062'
+                    'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
                 }
             }
             axios.request(optionsr).then((response) => {
@@ -110,10 +110,10 @@ export default {
                 projetsList.forEach((projet) => {
                     var top = document.createElement('div');
                     top.innerHTML = '<div class="project-card">' 
-                        + '<picture><source srcset="http://localhost:1337' + projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1320px)">'
-                            + '<source srcset="http://localhost:1337' + projet.attributes.Rectangle.data.attributes.url + '" media="(min-width: 1150px)">'
-                            + '<source srcset="http://localhost:1337' +  projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1000px)">'
-                            + '<img src="http://localhost:1337' + projet.attributes.Carre.data.attributes.url + '" alt="MDN">'
+                        + '<picture><source srcset="https://strapi-z4iu.onrender.com' + projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1320px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + projet.attributes.Rectangle.data.attributes.url + '" media="(min-width: 1150px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' +  projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1000px)">'
+                            + '<img src="https://strapi-z4iu.onrender.com' + projet.attributes.Carre.data.attributes.url + '" alt="MDN">'
                         + '</picture>'
                         + '</div>'
                     portfoliowrapper.appendChild(top);
@@ -136,9 +136,9 @@ export default {
             const optionsx = {
                 method: 'GET',
                 maxBodyLength: Infinity,
-                url: 'http://localhost:1337/api/projets?populate=*',
+                url: 'https://strapi-z4iu.onrender.com/api/projets?populate=*',
                 headers: {
-                    'Authorization': 'Bearer d9021206876fa9b96a716c638ca82803a98647a80b81657a0f483a3227f1313138e1754fe19fa4ecca3c402b93a13de6543db152245e5cdfbe4e474820131bfe43c334a8e88bb5773e23567c82fdf6a8ab962a9ed394a2b0181e260f364ac9b9a034c903b852270aab7c58c5e28326b57766a6038aa2e15c678525da3bf2f062'
+                    'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
                 }
             }
             axios.request(optionsx).then((response) => {
@@ -149,10 +149,10 @@ export default {
                 cataloglistingAll.forEach((projet) => {
                     var tre = document.createElement('div');
                     tre.innerHTML = '<div class="project-card">' 
-                        + '<picture><source srcset="http://localhost:1337' + projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1320px)">'
-                            + '<source srcset="http://localhost:1337' + projet.attributes.Rectangle.data.attributes.url + '" media="(min-width: 1150px)">'
-                            + '<source srcset="http://localhost:1337' +  projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1000px)">'
-                            + '<img src="http://localhost:1337' + projet.attributes.Carre.data.attributes.url + '" alt="MDN">'
+                        + '<picture><source srcset="https://strapi-z4iu.onrender.com' + projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1320px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + projet.attributes.Rectangle.data.attributes.url + '" media="(min-width: 1150px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' +  projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1000px)">'
+                            + '<img src="https://strapi-z4iu.onrender.com' + projet.attributes.Carre.data.attributes.url + '" alt="MDN">'
                         + '</picture>'
                         + '</div>'
                     portfoliowrapper.appendChild(tre);
@@ -168,9 +168,9 @@ export default {
         const options = {
             method: 'GET',
             maxBodyLength: Infinity,
-            url: 'http://localhost:1337/api/content-type-builder/content-types/api::projet.projet',
+            url: 'https://strapi-z4iu.onrender.com/api/content-type-builder/content-types/api::projet.projet',
             headers: {
-                'Authorization': 'Bearer d9021206876fa9b96a716c638ca82803a98647a80b81657a0f483a3227f1313138e1754fe19fa4ecca3c402b93a13de6543db152245e5cdfbe4e474820131bfe43c334a8e88bb5773e23567c82fdf6a8ab962a9ed394a2b0181e260f364ac9b9a034c903b852270aab7c58c5e28326b57766a6038aa2e15c678525da3bf2f062'
+                'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
             }
         }
         axios.request(options).then((response) => {
@@ -183,9 +183,9 @@ export default {
         const optionst = {
             method: 'GET',
             maxBodyLength: Infinity,
-            url: 'http://localhost:1337/api/projets?populate=*',
+            url: 'https://strapi-z4iu.onrender.com/api/projets?populate=*',
             headers: {
-                'Authorization': 'Bearer d9021206876fa9b96a716c638ca82803a98647a80b81657a0f483a3227f1313138e1754fe19fa4ecca3c402b93a13de6543db152245e5cdfbe4e474820131bfe43c334a8e88bb5773e23567c82fdf6a8ab962a9ed394a2b0181e260f364ac9b9a034c903b852270aab7c58c5e28326b57766a6038aa2e15c678525da3bf2f062'
+                'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
             }
         }
         axios.request(optionst).then((response) => {
