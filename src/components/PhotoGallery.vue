@@ -3,7 +3,7 @@ import axios from 'axios'
 </script>
 <template>
     <div class="gallery-grid-display" v-for="photo in photos" :key="photo.id">
-        <img :src="`https://parch-api-strapi.herokuapp.com` + photo.attributes.Rectangle.data.attributes.url" alt="MDN">
+        <img :src="`https://strapi-z4iu.onrender.com` + photo.attributes.Rectangle.data.attributes.url" alt="MDN">
     </div>
 </template>
 <script>
@@ -19,7 +19,7 @@ export default {
         const options = {
             method: 'GET',
             maxBodyLength: Infinity,
-            url: 'https://parch-api-strapi.herokuapp.com/api/photos?populate=*',
+            url: 'https://strapi-z4iu.onrender.com/api/galerie-photos?populate=*',
             headers: {
                 'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
             }
