@@ -363,10 +363,11 @@ footer.hover-footer #footer-wrapper .footer-content .for-third-area {
 
 #app > main > div > div > div.vueperslides__parallax-wrapper > div > div > div.vueperslide.vueperslide--active.vueperslide--visible > div > div.vueperslide__content {
   width: 40%;
-  color: #E6E9F1;
+  color: #38518F;
   font-family: "lato", sans-serif;
   font-weight: 600;
   font-style: normal;
+  font-size: 20px;
 }
 
 .vueperslides {
@@ -386,13 +387,13 @@ footer.hover-footer #footer-wrapper .footer-content .for-third-area {
 
 .vueperslide__content-wrapper {
   margin-left: 26px !important;
+  color: #38518F !important;
 }
 .vueperslide__content-wrapper .vueperslide__title {
-  font-size: 80px;
+  font-size: 105px;
   font-family: "lato", sans-serif;
   font-weight: 900;
   font-style: normal;
-  color: #E6E9F1;
   text-transform: uppercase;
 }
 

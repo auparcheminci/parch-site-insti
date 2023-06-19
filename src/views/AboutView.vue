@@ -7,7 +7,7 @@ import PhotoGallery from '../components/PhotoGallery.vue'
             <h1>"50 ans d'expérience, de savoir-faire et d'ambitions"</h1>
         </div>
         <div id="about-image">
-            <img src="/src/assets/images/FA-01.jpg">
+            <img src="/src/assets/images/FAC-005-Edit.jpg">
         </div>
         <div id="wrapper-about-main-bloc">
             <div class="element-of-main-bloc">

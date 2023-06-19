@@ -130,19 +130,15 @@ import { RouterLink, RouterView } from 'vue-router'
           </div>
           <div class="under-menu-element">
             <div class="section-hidden">
-              <a href="#">Au Parchemin en vidéo</a>
-              <a href="#">Au Parchemin en images</a>
-              <a href="#">Notre histoire</a>
-              <a href="#">Nos différences</a>
+              <a href="http://localhost:5173/about.la-galerie-photo">Voir tout</a>
 
             </div>
             <div class="section-hidden">
-              <a href="#">Nos nouveautés</a>
-              <a href="#">Nos catalogues</a>
+              <a href="https://strapi-z4iu.onrender.com/uploads/Catalogue_General_2023_8cefd28042.pdf">Notre catalogue général</a>
+              <a href="https://strapi-z4iu.onrender.com/uploads/Catalogue_Bureau_2023_ed78dc6758.pdf">Notre catalogue Bureau</a>
             </div>
             <div class="section-hidden">
-              <a href="#">Nos nouveautés</a>
-              <a href="#">Nos catalogues</a>
+              <a href="la-galerie-photo">Nous découvrir en image</a>
             </div>
           </div>
           <div class="under-menu-3d">

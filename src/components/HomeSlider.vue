@@ -9,6 +9,7 @@ import 'vueperslides/dist/vueperslides.css'
     :key="i"
     :image="slide.image"
     :title="slide.title"
+    :slide-ratio="1 / 3"
     :content="slide.content" />
 </vueper-slides>
 </template>
@@ -18,15 +19,11 @@ export default {
   data: () => ({
   slides: [
     {
-    title: 'Diversité.<br>Professionalisme.<br>Confiance.<br>',
-    content: 'Paragraphe en overlay.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. ',
+    title: "C'est la rentrée !",
+    content: "Pour tous les goûts et pour tous les budgets. Equipez vos enfants sans prise de tête pour la rentrée scolaire.<br> Choissisez parmi une sélection d'articles qui feront leur bonheur tout au long de l'année, en boutique ou chez nos revendeurs.",
     // You can also provide a URL for the image.
-    image: 'src/assets/images/Fermeturechassisverrezalfjpg_63063fb114e15.jpg'
+    image: 'dist/assets/main-rentree-cote.jpg',
     },
-    {
-      title: 'Slide #2',
-      content: 'Slide 2 content.'
-    }
   ]
 })
 
