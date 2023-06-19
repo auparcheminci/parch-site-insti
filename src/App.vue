@@ -127,7 +127,7 @@ import { RouterLink, RouterView } from 'vue-router'
               <a href="https://www.instagram.com/auparcheminci/?hl=fr">Nous suivre sur instagram</a>
               <a href="https://forms.sendpulse.com/13e2d7bf42/">S'inscrire à notre newsletter</a>
             </div>
-          </div>
+          </div>//*[@id="wrapper-about"]/div[5]
           <div class="under-menu-element">
             <div class="section-hidden">
               <a href="http://localhost:5173/about.la-galerie-photo">Voir tout</a>
