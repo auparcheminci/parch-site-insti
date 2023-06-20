@@ -18,11 +18,11 @@ import { RouterLink, RouterView } from 'vue-router'
         <div class="lien-express">
           <div class="lien-express-catalogue">
             <i class="fa-solid fa-download"></i>
-            <a href="#">Télécharger notre catalogue général</a>
+            <a href="https://auparchemin.ci/assets/catalogues/Catalogue_General_2023.pdf">Télécharger notre catalogue général</a>
           </div>
           <div class="lien-express-whatsapp">
             <i class="fa-brands fa-whatsapp"></i>
-            <a href="#">Nous envoyer un message Whatsapp</a>
+            <a href="https://wa.me/2250799799999">Nous envoyer un message Whatsapp</a>
           </div>
         </div>
       </div>
@@ -130,7 +130,7 @@ import { RouterLink, RouterView } from 'vue-router'
           </div>
           <div class="under-menu-element">
             <div class="section-hidden">
-              <a href="http://localhost:5173/about.la-galerie-photo">Voir tout</a>
+              <a href="https://strapi-z4iu.onrender.com/about">Mieux connaitre le parchemin</a>
 
             </div>
             <div class="section-hidden">
@@ -138,7 +138,7 @@ import { RouterLink, RouterView } from 'vue-router'
               <a href="https://strapi-z4iu.onrender.com/uploads/Catalogue_Bureau_2023_ed78dc6758.pdf">Notre catalogue Bureau</a>
             </div>
             <div class="section-hidden">
-              <a href="la-galerie-photo">Nous découvrir en image</a>
+              <a href="https://strapi-z4iu.onrender.com/portfolio">Découvrir notre portfolio</a>
             </div>
           </div>
           <div class="under-menu-3d">
