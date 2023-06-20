@@ -138,7 +138,7 @@ import { RouterLink, RouterView } from 'vue-router'
               <a href="https://strapi-z4iu.onrender.com/uploads/Catalogue_Bureau_2023_ed78dc6758.pdf">Notre catalogue Bureau</a>
             </div>
             <div class="section-hidden">
-              <a href="https://site-parchemin.onrender.com/portfolio">Découvrir notre portfolio</a>
+              <a href="https://www.auparchemin.ci/portfolio">Découvrir notre portfolio</a>
             </div>
           </div>
           <div class="under-menu-3d">
