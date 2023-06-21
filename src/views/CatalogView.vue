@@ -174,7 +174,7 @@ export default {
             const optionsc = {
                 method: 'GET',
                 maxBodyLength: Infinity,
-                url: `https://strapi-z4iu.onrender.com/api/supplier-catalogs?filters[MarqueSupplier][$eq]=${currentbrand}&populate=*`,
+                url: `https://strapi-z4iu.onrender.com/api/supplier-catalogs?filters[MarqueSupplier][$eq]=${currentbrand}&pagination[pageSize]=50&populate=*`,
                 headers: {
                     'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
                 }
@@ -244,7 +244,7 @@ export default {
             const optionsg = {
                 method: 'GET',
                 maxBodyLength: Infinity,
-                url: `https://strapi-z4iu.onrender.com/api/supplier-catalogs?filters[Gamme][$contains]=${currentgamme}&sort[0]=TitleSupplier&populate=*`,
+                url: `https://strapi-z4iu.onrender.com/api/supplier-catalogs?filters[Gamme][$contains]=${currentgamme}&sort[0]=TitleSupplier&pagination[pageSize]=50&populate=*`,
                 headers: {
                     'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
                 }
@@ -315,7 +315,7 @@ export default {
             const optionse = {
                 method: 'GET',
                 maxBodyLength: Infinity,
-                url: 'https://strapi-z4iu.onrender.com/api/supplier-catalogs?sort[0]=TitleSupplier&populate=*',
+                url: 'https://strapi-z4iu.onrender.com/api/supplier-catalogs?sort[0]=TitleSupplier&pagination[pageSize]=50&populate=*',
                 headers: {
                     'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
                 }
@@ -387,7 +387,7 @@ export default {
         const optionsa = {
             method: 'GET',
             maxBodyLength: Infinity,
-            url: 'https://strapi-z4iu.onrender.com/api/supplier-catalogs?sort[0]=TitleSupplier&populate=*',
+            url: 'https://strapi-z4iu.onrender.com/api/supplier-catalogs?sort[0]=TitleSupplier&pagination[pageSize]=50&populate=*',
             headers: {
                 'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
             }
