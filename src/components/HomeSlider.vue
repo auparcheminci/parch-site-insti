@@ -3,7 +3,7 @@ import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
 </script>
 <template>
-<vueper-slides fade :touchable="false">
+<vueper-slides fade :touchable="false" class="no-shadow">
   <vueper-slide
     v-for="(slide, i) in slides"
     :key="i"
