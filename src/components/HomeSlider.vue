@@ -22,7 +22,7 @@ export default {
     title: "C'est la rentrée !",
     content: "Pour tous les goûts et pour tous les budgets. Equipez vos enfants sans prise de tête pour la rentrée scolaire.<br> Choissisez parmi une sélection d'articles qui feront leur bonheur tout au long de l'année, en boutique ou chez nos revendeurs.",
     // You can also provide a URL for the image.
-    image: 'https://auparcheminci-my.sharepoint.com/:i:/g/personal/ines_zarka_auparchemin_ci/EcTnqwZJZyxFrh1w1OAivHQBTw2sIAgpzfRoCZelgl-krA?e=JGaSIe',
+    image: '',
     },
   ]
 })
