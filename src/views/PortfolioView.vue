@@ -183,7 +183,7 @@ export default {
         const optionst = {
             method: 'GET',
             maxBodyLength: Infinity,
-            url: 'https://strapi-z4iu.onrender.com/api/projets?pagination[pageSize]=500populate=*',
+            url: 'https://strapi-z4iu.onrender.com/api/projets?pagination[pageSize]=500&populate=*',
             headers: {
                 'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
             }
