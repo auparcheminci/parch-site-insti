@@ -154,7 +154,7 @@ import { RouterLink, RouterView } from 'vue-router'
             </div>
             <div class="horaires">
               <div class="day-horaire">
-                <h5>Du Lundi au vendredi:</h5>
+                <h5>Du Lundi au Vendredi:</h5>
                 <p>8h à 12h</p>
                 <p>14h à 17h30</p>
               </div>
