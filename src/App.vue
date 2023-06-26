@@ -172,9 +172,9 @@ import { RouterLink, RouterView } from 'vue-router'
             <div class="telephone">
               <!-- <h4>Numéro de télephone</h4>-->
               <div class="details-tel">
-                <p>+225 07 07 09 41 50</p>
                 <p>+225 27 21 75 85 25/26/27/28/29</p>
-                <p>+225 27 21 75 66</p>
+                <p>+225 27 21 75 66 85/86/87/88/89</p>
+                <p>+225 07 07 09 41 50</p>
               </div>
             </div>
           </div>
