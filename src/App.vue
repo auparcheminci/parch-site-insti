@@ -130,7 +130,7 @@ import { RouterLink, RouterView } from 'vue-router'
           </div>
           <div class="under-menu-element">
             <div class="section-hidden">
-              <RouterLink to="/about">Mieux connaitre le Parchemin</RouterLink>
+              <RouterLink to="/about">Mieux nous connaître</RouterLink>
             </div>
             <div class="section-hidden">
               <a href="https://strapi-z4iu.onrender.com/uploads/Catalogue_General_2023_8cefd28042.pdf">Notre catalogue général</a>
