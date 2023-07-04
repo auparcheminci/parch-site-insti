@@ -97,7 +97,7 @@ export default {
             const optionsr = {
                 method: 'GET',
                 maxBodyLength: Infinity,
-                url: `https://strapi-z4iu.onrender.com/api/projets?filters[Categories][$eq]=${currentcat}&populate=*`,
+                url: `https://strapi-z4iu.onrender.com/api/projets?filters[Categories][$eq]=${currentcat}&pagination[pageSize]=500&populate=*`,
                 headers: {
                     'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
                 }
@@ -136,7 +136,7 @@ export default {
             const optionsx = {
                 method: 'GET',
                 maxBodyLength: Infinity,
-                url: 'https://strapi-z4iu.onrender.com/api/projets?populate=*',
+                url: 'https://strapi-z4iu.onrender.com/api/projets?pagination[pageSize]=500&populate=*',
                 headers: {
                     'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
                 }
