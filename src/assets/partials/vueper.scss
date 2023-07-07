@@ -1,6 +1,6 @@
 #app > main > div > div > div.vueperslides__parallax-wrapper > div > div > div.vueperslide.vueperslide--active.vueperslide--visible > div > div.vueperslide__content {
     width: 40%;
-    color: $BDEC8;
+    color: $GDEC1 !important;
     @include LatoSemibold;
     font-size: 20px;
 }
@@ -21,7 +21,7 @@
 
 .vueperslide__content-wrapper {
     margin-left: 26px !important;
-    color: $BDEC8 !important;
+    color: $GDEC1 !important;
 
     .vueperslide__title {
         font-size: 105px;

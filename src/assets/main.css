@@ -363,7 +363,7 @@ footer.hover-footer #footer-wrapper .footer-content .for-third-area {
 
 #app > main > div > div > div.vueperslides__parallax-wrapper > div > div > div.vueperslide.vueperslide--active.vueperslide--visible > div > div.vueperslide__content {
   width: 40%;
-  color: #38518F;
+  color: #F1F1F1 !important;
   font-family: "lato", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -387,7 +387,7 @@ footer.hover-footer #footer-wrapper .footer-content .for-third-area {
 
 .vueperslide__content-wrapper {
   margin-left: 26px !important;
-  color: #38518F !important;
+  color: #F1F1F1 !important;
 }
 .vueperslide__content-wrapper .vueperslide__title {
   font-size: 105px;
