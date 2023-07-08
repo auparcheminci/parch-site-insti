@@ -22,7 +22,7 @@ export default {
     title: "",
     content: "",
     // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/FAC_4_edited_2454e7ecff.webp',
+    image: 'https://strapi-z4iu.onrender.com/uploads/FAC_2_11944f6e8f.webp',
     },
     {
     title: "",
