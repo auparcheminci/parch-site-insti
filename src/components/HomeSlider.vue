@@ -46,6 +46,12 @@ export default {
     title: "",
     content: "",
     // You can also provide a URL for the image.
+    image: '	https://strapi-z4iu.onrender.com/uploads/MOB_26_648fa4fcce.webp',
+    },
+    {
+    title: "",
+    content: "",
+    // You can also provide a URL for the image.
     image: 'https://strapi-z4iu.onrender.com/uploads/EXP_122_597de4a39e.webp',
     },
   ]
