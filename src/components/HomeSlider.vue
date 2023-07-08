@@ -28,13 +28,7 @@ export default {
     title: "",
     content: "",
     // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/MAG_193_0eeca10e0a.webp',
-    },
-    {
-    title: "",
-    content: "",
-    // You can also provide a URL for the image.
-    image: '}https://strapi-z4iu.onrender.com/uploads/MAG_183_cff171910a.webp',
+    image: 'https://strapi-z4iu.onrender.com/uploads/MAG_193_edited_c3f69d674e.webp',
     },
     {
     title: "",
@@ -46,24 +40,12 @@ export default {
     title: "",
     content: "",
     // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/MOB_26_648fa4fcce.webp',
-    },
-    {
-    title: "",
-    content: "",
-    // You can also provide a URL for the image.
     image: 'https://strapi-z4iu.onrender.com/uploads/EXP_122_597de4a39e.webp',
-    },
-    {
-    title: "",
-    content: "",
-    // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/EXP_150_c25121c6e5.webp',
     },
   ]
 })
 
-
+}
 
 
 </script>
