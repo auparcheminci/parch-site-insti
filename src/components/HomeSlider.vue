@@ -28,7 +28,7 @@ export default {
     title: "",
     content: "",
     // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/MAG_193_edited_c3f69d674e.webp',
+    image: 'https://strapi-z4iu.onrender.com/uploads/MAG_193_0eeca10e0a.webp',
     },
     {
     title: "",
