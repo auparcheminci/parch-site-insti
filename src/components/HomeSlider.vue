@@ -3,7 +3,11 @@ import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
 </script>
 <template>
-<vueper-slides autoplay fade :touchable="false" class="no-shadow">
+<vueper-slides 
+fade :touchable="false" 
+class="no-shadow"
+autoplay
+  :pause-on-hover="pauseOnHover" >
   <vueper-slide
     v-for="(slide, i) in slides"
     :key="i"
@@ -17,6 +21,8 @@ import 'vueperslides/dist/vueperslides.css'
 export default {
   components: { VueperSlides, VueperSlide },
   data: () => ({
+  pauseOnHover: false,
+  autoPlaying: true,
   slides: [
     {
     title: "",
