@@ -6,7 +6,7 @@ import axios from 'axios'
                 <div class="main-catalog-inside" v-for="catalog in catalogs" :key="catalog.id">
                     <div class="first-part">
                         <h2>{{ catalog.attributes.Title }}</h2>
-                        <p>{{ catalog.attributes.Maj }}</p>
+                        <!--<p>{{ catalog.attributes.Maj }}</p> -->
                     </div>
                     <div class="link-main">
                         <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.Document.data.attributes.url"
