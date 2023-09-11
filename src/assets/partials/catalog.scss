@@ -359,19 +359,21 @@
 
         #section-fixed {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 3fr;
             grid-column-gap: 26px;
             #main-catalog-wrapper {
                 background-color: $BLEUP;
                 display: flex;
-                align-items: center;
+                //align-items: center;
                 justify-content: center;
                 color: $BDEC1;
     
                 .main-catalog-inside {
                     display: flex;
                     flex-direction: column;
+                    margin-top: 30px;
                     gap: 30px;
+                    width: 95%;
                     height: auto;
                     align-items: center;
     
@@ -385,6 +387,7 @@
                             @include LatoHeavy;
                             font-size: 22px;
                             text-transform: uppercase;
+                            text-align: center;
                         }
     
                         p {
@@ -408,7 +411,7 @@
                             padding: 10px;
                             text-transform: uppercase;
                             @include LatoMedium;
-                            letter-spacing: 1px;
+                            //letter-spacing: 1px;
                             font-size: 15px;
                             transition: ease 0.3s;
     
@@ -426,15 +429,16 @@
             #main-catalog-office-wrapper {
                 background-color: $GRISP;
                 display: flex;
-                align-items: center;
                 justify-content: center;
                 color: $BDEC1;
     
                 .main-catalog-inside {
                     display: flex;
                     flex-direction: column;
+                    margin-top: 30px;
                     gap: 30px;
                     height: auto;
+                    width: 95%;
                     align-items: center;
     
                     .first-part {
@@ -455,6 +459,13 @@
                             font-size: 16px;
                         }
                     }
+                    .links {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-column-gap : 5px;
+                        grid-row-gap : 5px;
+                    }
+
     
                     .link-main {
                         width: auto;
@@ -462,15 +473,16 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-    
+
+                      
                         a {
                             color: $BDEC1;
                             text-decoration: none;
                             border: 2px solid $BDEC1;
-                            padding: 10px;
+                            padding: 6px;
                             text-transform: uppercase;
                             @include LatoMedium;
-                            letter-spacing: 1px;
+                            //letter-spacing: 1px;
                             font-size: 15px;
                             transition: ease 0.3s;
     

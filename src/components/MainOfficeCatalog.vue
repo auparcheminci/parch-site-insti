@@ -3,16 +3,34 @@ import axios from 'axios'
 </script>
 <template>
     <div id="main-catalog-office-wrapper">
-                <div class="main-catalog-inside" v-for="catalog in catalogs" :key="catalog.id">
-                    <div class="first-part">
-                        <h2>{{ catalog.attributes.Title }}</h2>
-                        <!-- <p>{{ catalog.attributes.Maj }}</p> -->
-                    </div>
-                    <div class="link-main">
-                        <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.Document.data.attributes.url"
-                            target="_blank">Chaises & Fauteuils</a>
-                    </div>
+        <div class="main-catalog-inside" v-for="catalog in catalogs" :key="catalog.id">
+            <div class="first-part">
+                <h2>{{ catalog.attributes.Title }}</h2>
+                <!-- <p>{{ catalog.attributes.Maj }}</p> -->
+            </div>
+            <div class="links">
+                <div class="link-main">
+                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_cha.data.attributes.url"
+                        target="_blank">Chaises & Fauteuils</a>
                 </div>
+                <div class="link-main">
+                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_arm.data.attributes.url"
+                        target="_blank">Armoires Métalliques</a>
+                </div>
+                <div class="link-main">
+                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_vest.data.attributes.url"
+                        target="_blank">Vestiaires Métalliques</a>
+                </div>
+                <div class="link-main">
+                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_vest.data.attributes.url"
+                        target="_blank">Stockage & Archivage</a>
+                </div>
+                <div class="link-main">
+                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_ref.data.attributes.url"
+                        target="_blank">Réfectoire & Collectivité</a>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 <script>

@@ -1156,15 +1156,14 @@ footer.hover-footer #footer-wrapper .footer-content .for-third-area {
 #wrapper-catalog #catalog-content #section-fixed #main-catalog-wrapper {
   background-color: #203C81;
   display: flex;
+  align-items: center;
   justify-content: center;
   color: #E6E9F1;
 }
 #wrapper-catalog #catalog-content #section-fixed #main-catalog-wrapper .main-catalog-inside {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
   gap: 30px;
-  width: 95%;
   height: auto;
   align-items: center;
 }
@@ -1180,7 +1179,6 @@ footer.hover-footer #footer-wrapper .footer-content .for-third-area {
   font-style: normal;
   font-size: 22px;
   text-transform: uppercase;
-  text-align: center;
 }
 #wrapper-catalog #catalog-content #section-fixed #main-catalog-wrapper .main-catalog-inside .first-part p {
   font-family: "lato", sans-serif;
@@ -1205,6 +1203,7 @@ footer.hover-footer #footer-wrapper .footer-content .for-third-area {
   font-family: "lato", sans-serif;
   font-weight: 500;
   font-style: normal;
+  letter-spacing: 1px;
   font-size: 15px;
   transition: ease 0.3s;
 }
@@ -1216,16 +1215,15 @@ footer.hover-footer #footer-wrapper .footer-content .for-third-area {
 #wrapper-catalog #catalog-content #section-fixed #main-catalog-office-wrapper {
   background-color: #848585;
   display: flex;
+  align-items: center;
   justify-content: center;
   color: #E6E9F1;
 }
 #wrapper-catalog #catalog-content #section-fixed #main-catalog-office-wrapper .main-catalog-inside {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
   gap: 30px;
   height: auto;
-  width: 95%;
   align-items: center;
 }
 #wrapper-catalog #catalog-content #section-fixed #main-catalog-office-wrapper .main-catalog-inside .first-part {
@@ -1248,12 +1246,6 @@ footer.hover-footer #footer-wrapper .footer-content .for-third-area {
   text-transform: uppercase;
   font-size: 16px;
 }
-#wrapper-catalog #catalog-content #section-fixed #main-catalog-office-wrapper .main-catalog-inside .links {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-}
 #wrapper-catalog #catalog-content #section-fixed #main-catalog-office-wrapper .main-catalog-inside .link-main {
   width: auto;
   height: auto;
@@ -1265,11 +1257,12 @@ footer.hover-footer #footer-wrapper .footer-content .for-third-area {
   color: #E6E9F1;
   text-decoration: none;
   border: 2px solid #E6E9F1;
-  padding: 6px;
+  padding: 10px;
   text-transform: uppercase;
   font-family: "lato", sans-serif;
   font-weight: 500;
   font-style: normal;
+  letter-spacing: 1px;
   font-size: 15px;
   transition: ease 0.3s;
 }
