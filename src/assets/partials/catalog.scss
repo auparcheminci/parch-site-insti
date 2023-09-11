@@ -354,12 +354,12 @@
     #catalog-content {
         width: calc(100% - 54px);
         display: grid;
-        grid-template-rows: 200px 1fr;
+        grid-template-rows: 250px 1fr;
         grid-row-gap: 26px;
 
         #section-fixed {
             display: grid;
-            grid-template-columns: 1fr 3fr;
+            grid-template-columns: 1fr 1fr;
             grid-column-gap: 26px;
             #main-catalog-wrapper {
                 background-color: $BLEUP;
@@ -462,8 +462,8 @@
                     .links {
                         display: grid;
                         grid-template-columns: 1fr 1fr 1fr;
-                        grid-column-gap : 5px;
-                        grid-row-gap : 5px;
+                        grid-column-gap : 10px;
+                        grid-row-gap : 10px;
                     }
 
     
@@ -472,14 +472,14 @@
                         height: auto;
                         display: flex;
                         align-items: center;
+                        border: 2px solid $BDEC1;
                         justify-content: center;
 
                       
                         a {
                             color: $BDEC1;
                             text-decoration: none;
-                            border: 2px solid $BDEC1;
-                            padding: 6px;
+                            padding: 10px;
                             text-transform: uppercase;
                             @include LatoMedium;
                             //letter-spacing: 1px;
@@ -487,10 +487,20 @@
                             transition: ease 0.3s;
     
                         }
-    
-                        a:hover {
-                            background-color: $BDEC1;
+                    }
+
+                    .link-main:hover {
+                        background-color: $BDEC1;
+                        transition: ease 0.3s;
+
+                        a  {
                             color: $GRISP;
+                            text-decoration: none;
+                            padding: 10px;
+                            text-transform: uppercase;
+                            @include LatoMedium;
+                            //letter-spacing: 1px;
+                            font-size: 15px;
                             transition: ease 0.3s;
                         }
                     }
