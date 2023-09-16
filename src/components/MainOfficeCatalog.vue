@@ -26,7 +26,7 @@ import axios from 'axios'
                         target="_blank">Vestiaires Métalliques</a>
                 </div>
                 <div class="link-main">
-                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_vest.data.attributes.url"
+                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_arch.data.attributes.url"
                         target="_blank">Stockage & Archivage</a>
                 </div>
                 <div class="link-main">
