@@ -133,8 +133,6 @@ import { RouterLink, RouterView } from 'vue-router'
               <RouterLink to="/about">Mieux nous connaître</RouterLink>
             </div>
             <div class="section-hidden">
-              <a href="https://strapi-z4iu.onrender.com/uploads/Catalogue_General_2023_8cefd28042.pdf">Notre catalogue général</a>
-              <a href="https://strapi-z4iu.onrender.com/uploads/Catalogue_Bureau_2023_ed78dc6758.pdf">Notre catalogue Mobilier de bureau</a>
             </div>
             <div class="section-hidden">
               <RouterLink to="/portfolio">Découvrir notre portfolio</RouterLink>
