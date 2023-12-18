@@ -9,8 +9,9 @@ import axios from 'axios'
                 <!-- <p>{{ catalog.attributes.Maj }}</p> -->
             </div>
             <div class="links">
-                <div class="link-main" style="cursor: not-allowed;">
-                    <a target="_blank">Mobilier de bureau</a>
+                <div class="link-main">
+                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_mob.data.attributes.url"
+                        target="_blank">Mobilier de bureau</a>
                 </div>
                 <div class="link-main">
                     <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_cha.data.attributes.url"
