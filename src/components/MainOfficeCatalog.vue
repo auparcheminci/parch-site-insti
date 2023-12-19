@@ -10,10 +10,12 @@ import axios from 'axios'
             </div>
             <div class="links">
                 <div class="link-main">
-                    <a style="cursor: not-allowed;">Mobilier de bureau gamme Kamos</a>
+                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_kamos.data.attributes.url"
+                        target="_blank">Mobilier de bureau gamme Kamos</a>
                 </div>
                 <div class="link-main">
-                    <a style="cursor: not-allowed;">Mobilier de bureau gamme Vista</a>
+                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_vista.data.attributes.url"
+                        target="_blank">Mobilier de bureau gamme Vista</a>
                 </div>
                 <div class="link-main">
                     <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_mob.data.attributes.url"
