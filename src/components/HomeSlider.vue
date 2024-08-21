@@ -40,7 +40,7 @@ export default {
     title: "",
     content: "",
     // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/MOB_22_c582494519.webp',
+    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_PICNIK_d56b066d11.jpg',
     },
     {
     title: "",
