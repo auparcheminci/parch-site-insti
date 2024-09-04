@@ -354,13 +354,13 @@
     #catalog-content {
         width: calc(100% - 54px);
         display: grid;
-        grid-template-rows: 250px 1fr;
         grid-row-gap: 26px;
 
         #section-fixed {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            grid-column-gap: 26px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        
             #main-catalog-wrapper {
                 background-color: $BLEUP;
                 display: flex;
@@ -371,10 +371,9 @@
                 .main-catalog-inside {
                     display: flex;
                     flex-direction: column;
-                    margin-top: 30px;
+                    margin: 15px;
                     gap: 30px;
                     height: auto;
-                    width: 95%;
                     align-items: center;
     
                     .first-part {
@@ -435,10 +434,9 @@
                 .main-catalog-inside {
                     display: flex;
                     flex-direction: column;
-                    margin-top: 30px;
+                    margin: 15px;
                     gap: 30px;
                     height: auto;
-                    width: 95%;
                     align-items: center;
     
                     .first-part {
@@ -460,10 +458,8 @@
                         }
                     }
                     .links {
-                        display: grid;
-                        grid-template-columns: 1fr 1fr 1fr 1fr;
-                        grid-column-gap : 10px;
-                        grid-row-gap : 10px;
+                        display: flex;
+                        align-items: center;
                     }
 
     

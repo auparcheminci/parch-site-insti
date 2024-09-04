@@ -1,4 +1,5 @@
-@import url("https://fonts.cdnfonts.com/css/lato"); /* ----- COULEURS DU LOGO ---- */
+@import url("https://fonts.cdnfonts.com/css/lato");
+/* ----- COULEURS DU LOGO ---- */
 /* ----- DECLINAISONS DU GRIS LOGO ---- */
 /* ----- DECLINAISONS DU BLEU LOGO ---- */
 /* ----- COULEURS DES GAMMES ---- */
@@ -1145,13 +1146,12 @@ footer.hover-footer #footer-wrapper .footer-content .for-third-area {
 #wrapper-catalog #catalog-content {
   width: calc(100% - 54px);
   display: grid;
-  grid-template-rows: 250px 1fr;
   grid-row-gap: 26px;
 }
 #wrapper-catalog #catalog-content #section-fixed {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-column-gap: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 #wrapper-catalog #catalog-content #section-fixed #main-catalog-wrapper {
   background-color: #203C81;
@@ -1162,10 +1162,9 @@ footer.hover-footer #footer-wrapper .footer-content .for-third-area {
 #wrapper-catalog #catalog-content #section-fixed #main-catalog-wrapper .main-catalog-inside {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin: 15px;
   gap: 30px;
   height: auto;
-  width: 95%;
   align-items: center;
 }
 #wrapper-catalog #catalog-content #section-fixed #main-catalog-wrapper .main-catalog-inside .first-part {
@@ -1222,10 +1221,9 @@ footer.hover-footer #footer-wrapper .footer-content .for-third-area {
 #wrapper-catalog #catalog-content #section-fixed #main-catalog-office-wrapper .main-catalog-inside {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin: 15px;
   gap: 30px;
   height: auto;
-  width: 95%;
   align-items: center;
 }
 #wrapper-catalog #catalog-content #section-fixed #main-catalog-office-wrapper .main-catalog-inside .first-part {
@@ -1249,10 +1247,8 @@ footer.hover-footer #footer-wrapper .footer-content .for-third-area {
   font-size: 16px;
 }
 #wrapper-catalog #catalog-content #section-fixed #main-catalog-office-wrapper .main-catalog-inside .links {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  display: flex;
+  align-items: center;
 }
 #wrapper-catalog #catalog-content #section-fixed #main-catalog-office-wrapper .main-catalog-inside .link-main {
   width: auto;

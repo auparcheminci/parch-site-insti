@@ -10,36 +10,8 @@ import axios from 'axios'
             </div>
             <div class="links">
                 <div class="link-main">
-                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_kamos.data.attributes.url"
-                        target="_blank">Mobilier de bureau gamme Kamos</a>
-                </div>
-                <div class="link-main">
-                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_merryfair.data.attributes.url"
-                        target="_blank">Mobilier de bureau gamme Merryfair</a>
-                </div>
-                <div class="link-main">
-                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_mob.data.attributes.url"
-                        target="_blank">Mobilier de bureau gamme SIT</a>
-                </div>
-                <div class="link-main">
                     <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_cha.data.attributes.url"
-                        target="_blank">Chaises & Fauteuils</a>
-                </div>
-                <div class="link-main">
-                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_arm.data.attributes.url"
-                        target="_blank">Armoires Métalliques</a>
-                </div>
-                <div class="link-main">
-                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_vest.data.attributes.url"
-                        target="_blank">Vestiaires Métalliques</a>
-                </div>
-                <div class="link-main">
-                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_arch.data.attributes.url"
-                        target="_blank">Stockage & Archivage</a>
-                </div>
-                <div class="link-main">
-                    <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.document_ref.data.attributes.url"
-                        target="_blank">Réfectoire & Collectivité</a>
+                        target="_blank">Télécharger le catalogue</a>
                 </div>
             </div>
         </div>

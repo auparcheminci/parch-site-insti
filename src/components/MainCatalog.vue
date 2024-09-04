@@ -10,7 +10,7 @@ import axios from 'axios'
                     </div>
                     <div class="link-main">
                         <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.Document.data.attributes.url"
-                            target="_blank">Voir le catalogue</a>
+                            target="_blank">Télécharger le catalogue</a>
                     </div>
                 </div>
             </div>
