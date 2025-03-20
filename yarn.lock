@@ -1827,10 +1827,10 @@ node-gyp@^7.1.0, node-gyp@^7.1.2:
     tar "^6.0.2"
     which "^2.0.2"
 
-node@18.x:
-  version "18.20.7"
-  resolved "https://registry.yarnpkg.com/node/-/node-18.20.7.tgz#2e598d4c996364d207bcb314fa93512483d75338"
-  integrity sha512-wQiDRgSlZKUZHODQsmMQNXYnvrZL7tNmuS/n1hBfxD8FM39x/xJ/1Tg9mHwdqvhQjMlkqOVo73R6j1Sy4gcqwQ==
+node@23.x:
+  version "23.10.0"
+  resolved "https://registry.yarnpkg.com/node/-/node-23.10.0.tgz#1944a6535a501b7785b73d7ad34727f17075e32d"
+  integrity sha512-ZHGFyslrbG1/o/aJCA0f5+Es4gReiPudSo1zIquDEDrHWKg4F0/g+ONDXOlaabgys4Xxs5AdVb7steIPi/dw1g==
   dependencies:
     node-bin-setup "^1.0.0"
 
