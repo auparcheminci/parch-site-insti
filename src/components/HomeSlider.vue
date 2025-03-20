@@ -34,31 +34,19 @@ export default {
     title: "",
     content: "",
     // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_0628c851b3.jpg',
+    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_SLIDE_2_0d593c003d.jpg',
     },
     {
     title: "",
     content: "",
     // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_PICNIK_d56b066d11.jpg',
+    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_SLIDE_3_f9a40e38c5.jpg',
     },
     {
     title: "",
     content: "",
     // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/MOB_26_648fa4fcce.webp',
-    },
-    {
-    title: "",
-    content: "",
-    // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/EXP_150_c25121c6e5.webp',
-    },
-    {
-    title: "",
-    content: "",
-    // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/EXP_122_597de4a39e.webp',
+    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_SLIDE_4_bf313942f8.jpg',
     },
   ]
 })
