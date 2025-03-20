@@ -28,7 +28,7 @@ export default {
     title: "",
     content: "",
     // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_8e50fdb62c.jpg',
+    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_PICNIK_d56b066d11.jpg',
     },
     {
     title: "",
