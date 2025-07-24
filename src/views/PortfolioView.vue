@@ -46,10 +46,10 @@ import axios from 'axios';
         <div id="portfolio-card-section">
             <div class="project-card" v-for="project in projects" :key="project.id">
                 <picture>
-                    <source :srcset="`https://strapi-z4iu.onrender.com` + project.attributes.Carre.data.attributes.url" media="(min-width: 1320px)">
-                    <source :srcset="`https://strapi-z4iu.onrender.com` + project.attributes.Rectangle.data.attributes.url" media="(min-width: 1150px)">
-                    <source :srcset="`https://strapi-z4iu.onrender.com` + project.attributes.Carre.data.attributes.url" media="(min-width: 1000px)">
-                    <img :src="`https://strapi-z4iu.onrender.coms` + project.attributes.Carre.data.attributes.url" alt="MDN">
+                    <source :srcset="`https://mighty-festival-73bd3f630e.strapiapp.com` + project.attributes.Carre.data.attributes.url" media="(min-width: 1320px)">
+                    <source :srcset="`https://mighty-festival-73bd3f630e.strapiapp.com` + project.attributes.Rectangle.data.attributes.url" media="(min-width: 1150px)">
+                    <source :srcset="`https://mighty-festival-73bd3f630e.strapiapp.com` + project.attributes.Carre.data.attributes.url" media="(min-width: 1000px)">
+                    <img :src="`https://mighty-festival-73bd3f630e.strapiapp.com` + project.attributes.Carre.data.attributes.url" alt="MDN">
                 </picture>
             </div>
         </div>
@@ -97,7 +97,7 @@ export default {
             const optionsr = {
                 method: 'GET',
                 maxBodyLength: Infinity,
-                url: `https://strapi-z4iu.onrender.com/api/projets?filters[Categories][$eq]=${currentcat}&pagination[pageSize]=500&populate=*`,
+                url: `https://mighty-festival-73bd3f630e.strapiapp.com/api/projets?filters[Categories][$eq]=${currentcat}&pagination[pageSize]=500&populate=*`,
                 headers: {
                     'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
                 }
@@ -110,10 +110,10 @@ export default {
                 projetsList.forEach((projet) => {
                     var top = document.createElement('div');
                     top.innerHTML = '<div class="project-card">' 
-                        + '<picture><source srcset="https://strapi-z4iu.onrender.com' + projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1320px)">'
-                            + '<source srcset="https://strapi-z4iu.onrender.com' + projet.attributes.Rectangle.data.attributes.url + '" media="(min-width: 1150px)">'
-                            + '<source srcset="https://strapi-z4iu.onrender.com' +  projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1000px)">'
-                            + '<img src="https://strapi-z4iu.onrender.com' + projet.attributes.Carre.data.attributes.url + '" alt="MDN">'
+                        + '<picture><source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1320px)">'
+                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + projet.attributes.Rectangle.data.attributes.url + '" media="(min-width: 1150px)">'
+                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' +  projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1000px)">'
+                            + '<img src="https://mighty-festival-73bd3f630e.strapiapp.com' + projet.attributes.Carre.data.attributes.url + '" alt="MDN">'
                         + '</picture>'
                         + '</div>'
                     portfoliowrapper.appendChild(top);
@@ -136,7 +136,7 @@ export default {
             const optionsx = {
                 method: 'GET',
                 maxBodyLength: Infinity,
-                url: 'https://strapi-z4iu.onrender.com/api/projets?pagination[pageSize]=500&populate=*',
+                url: 'https://mighty-festival-73bd3f630e.strapiapp.com/api/projets?pagination[pageSize]=500&populate=*',
                 headers: {
                     'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
                 }
@@ -149,10 +149,10 @@ export default {
                 cataloglistingAll.forEach((projet) => {
                     var tre = document.createElement('div');
                     tre.innerHTML = '<div class="project-card">' 
-                        + '<picture><source srcset="https://strapi-z4iu.onrender.com' + projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1320px)">'
-                            + '<source srcset="https://strapi-z4iu.onrender.com' + projet.attributes.Rectangle.data.attributes.url + '" media="(min-width: 1150px)">'
-                            + '<source srcset="https://strapi-z4iu.onrender.com' +  projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1000px)">'
-                            + '<img src="https://strapi-z4iu.onrender.com' + projet.attributes.Carre.data.attributes.url + '" alt="MDN">'
+                        + '<picture><source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1320px)">'
+                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + projet.attributes.Rectangle.data.attributes.url + '" media="(min-width: 1150px)">'
+                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' +  projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1000px)">'
+                            + '<img src="https://mighty-festival-73bd3f630e.strapiapp.com' + projet.attributes.Carre.data.attributes.url + '" alt="MDN">'
                         + '</picture>'
                         + '</div>'
                     portfoliowrapper.appendChild(tre);
@@ -168,7 +168,7 @@ export default {
         const options = {
             method: 'GET',
             maxBodyLength: Infinity,
-            url: 'https://strapi-z4iu.onrender.com/api/content-type-builder/content-types/api::projet.projet',
+            url: 'https://mighty-festival-73bd3f630e.strapiapp.com/api/content-type-builder/content-types/api::projet.projet',
             headers: {
                 'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
             }
@@ -183,7 +183,7 @@ export default {
         const optionst = {
             method: 'GET',
             maxBodyLength: Infinity,
-            url: 'https://strapi-z4iu.onrender.com/api/projets?pagination[pageSize]=500&populate=*',
+            url: 'https://mighty-festival-73bd3f630e.strapiapp.com/api/projets?pagination[pageSize]=500&populate=*',
             headers: {
                 'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
             }

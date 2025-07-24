@@ -28,7 +28,7 @@ export default {
     title: "",
     content: "",
     // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_SLIDE_1_0f08dfb984.jpg',
+    image: 'https://mighty-festival-73bd3f630e.strapiapp.com/uploads/BANNIERE_SLIDE_1_0f08dfb984.jpg',
     },
     {
     title: "",
@@ -40,13 +40,13 @@ export default {
     title: "",
     content: "",
     // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_SLIDE_3_f9a40e38c5.jpg',
+    image: 'https://mighty-festival-73bd3f630e.strapiapp.com/uploads/BANNIERE_SLIDE_3_f9a40e38c5.jpg',
     },
     {
     title: "",
     content: "",
     // You can also provide a URL for the image.
-    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_SLIDE_4_bf313942f8.jpg',
+    image: 'https://mighty-festival-73bd3f630e.strapiapp.com/uploads/BANNIERE_SLIDE_4_bf313942f8.jpg',
     },
   ]
 })
