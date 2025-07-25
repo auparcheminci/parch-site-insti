@@ -1,3 +1,8 @@
+Used : 
+Vite 7
+Vue 3
+Axios
+
 # site-insti
 
 This template should help get you started developing with Vue 3 in Vite.

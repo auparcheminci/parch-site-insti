@@ -96,12 +96,12 @@ import axios from 'axios'
                     <div id="supplier-all" class="supplier-card-wrapper" v-for="catalog in catalogs" :key="catalog.TitleSupplier">
                         <div class="catalog-cover">
                             <picture>
-                                <source :srcset="`https://mighty-festival-73bd3f630e.strapiapp.com` + catalog.CoverSquareby3Full.url" media="(min-width: 1700px)">
-                                <source :srcset="`https://mighty-festival-73bd3f630e.strapiapp.com` + catalog.CoverSquareby3.url" media="(min-width: 1620px)">
-                                <source :srcset="`https://mighty-festival-73bd3f630e.strapiapp.com` + catalog.CoverSquareby2.url" media="(min-width: 1320px)">
-                                <source :srcset="`https://mighty-festival-73bd3f630e.strapiapp.com` + catalog.Cover620.url" media="(min-width: 1095px)">
-                                <source :srcset="`https://mighty-festival-73bd3f630e.strapiapp.com` + catalog.CoverRectangle.url" media="(min-width: 1000px)">
-                                <img :src="`https://mighty-festival-73bd3f630e.strapiapp.com` + catalog.CoverSupplierDefault.url" alt="MDN">
+                                <source :srcset="`https://strapi-z4iu.onrender.com` + catalog.CoverSquareby3Full.url" media="(min-width: 1700px)">
+                                <source :srcset="`https://strapi-z4iu.onrender.com` + catalog.CoverSquareby3.url" media="(min-width: 1620px)">
+                                <source :srcset="`https://strapi-z4iu.onrender.com` + catalog.CoverSquareby2.url" media="(min-width: 1320px)">
+                                <source :srcset="`https://strapi-z4iu.onrender.com` + catalog.Cover620.url" media="(min-width: 1095px)">
+                                <source :srcset="`https://strapi-z4iu.onrender.com` + catalog.CoverRectangle.url" media="(min-width: 1000px)">
+                                <img :src="`https://strapi-z4iu.onrender.com` + catalog.CoverSupplierDefault.url" alt="MDN">
                             </picture>
                         </div>
                     <div class="supplier-catalog-element">
@@ -112,7 +112,7 @@ import axios from 'axios'
                             </div>
                             <div class="link-main">
                                 <p>Voir le catalogue</p>
-                                <a :href="`https://mighty-festival-73bd3f630e.strapiapp.com` + catalog.attributes.DocumentSupplier.data.attributes.url"
+                                <a :href="`https://strapi-z4iu.onrender.com` + catalog.attributes.DocumentSupplier.data.attributes.url"
                                     target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="17.249" height="16.42"
                                         viewBox="0 0 17.249 16.42">
                                         <g id="Fleche_blanche" data-name="Fleche blanche" transform="translate(8.624 8.21)">
@@ -174,7 +174,7 @@ export default {
             const optionsc = {
                 method: 'GET',
                 maxBodyLength: Infinity,
-                url: `https://mighty-festival-73bd3f630e.strapiapp.com/api/supplier-catalogs?filters[MarqueSupplier][$eq]=${currentbrand}&pagination[pageSize]=50&populate=*`,
+                url: `https://strapi-z4iu.onrender.com/api/supplier-catalogs?filters[MarqueSupplier][$eq]=${currentbrand}&pagination[pageSize]=50&populate=*`,
                 headers: {
                     'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
                 }
@@ -205,12 +205,12 @@ export default {
                         '<div id="supplier-all" class="supplier-card-wrapper">'
                         + '<div class="catalog-cover">'
                         + '<picture>'
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverSquareby3Full.data.attributes.url + '" media="(min-width: 1700px)">'
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverSquareby3.data.attributes.url + '" media="(min-width: 1620px)">'
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverSquareby2.data.attributes.url + '" media="(min-width: 1320px)">'
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.Cover620.data.attributes.url + '" media="(min-width: 1095px)">'
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverRectangle.data.attributes.url + '" media="(min-width: 1000px)">'
-                            + '<img src="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverSupplierDefault.data.attributes.url + '" alt="MDN">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverSquareby3Full.data.attributes.url + '" media="(min-width: 1700px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverSquareby3.data.attributes.url + '" media="(min-width: 1620px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverSquareby2.data.attributes.url + '" media="(min-width: 1320px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.Cover620.data.attributes.url + '" media="(min-width: 1095px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverRectangle.data.attributes.url + '" media="(min-width: 1000px)">'
+                            + '<img src="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverSupplierDefault.data.attributes.url + '" alt="MDN">'
                         + '</picture>'
                         + '</div>'
                         + '<div class="supplier-catalog-element"> '
@@ -221,7 +221,7 @@ export default {
                         + '</div>'
                         + '<div class="link-main">'
                         + '<p>' + 'Voir le catalogue' + '</p>'
-                        + '<a href="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.DocumentSupplier.data.attributes.url + ' "><i class="fa-solid fa-arrow-right"></i>' + '</a>'
+                        + '<a href="https://strapi-z4iu.onrender.com' + catalog.attributes.DocumentSupplier.data.attributes.url + ' "><i class="fa-solid fa-arrow-right"></i>' + '</a>'
                         + '</div>'
                         + '</div>'
                         + '</div>'
@@ -244,7 +244,7 @@ export default {
             const optionsg = {
                 method: 'GET',
                 maxBodyLength: Infinity,
-                url: `https://mighty-festival-73bd3f630e.strapiapp.com/api/supplier-catalogs?filters[Gamme][$contains]=${currentgamme}&sort[0]=TitleSupplier&pagination[pageSize]=50&populate=*`,
+                url: `https://strapi-z4iu.onrender.com/api/supplier-catalogs?filters[Gamme][$contains]=${currentgamme}&sort[0]=TitleSupplier&pagination[pageSize]=50&populate=*`,
                 headers: {
                     'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
                 }
@@ -275,12 +275,12 @@ export default {
                     '<div id="supplier-all" class="supplier-card-wrapper">'
                         + '<div class="catalog-cover">'
                         + '<picture>' 
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverSquareby3Full.data.attributes.url + '" media="(min-width: 1700px)">'
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverSquareby3.data.attributes.url + '" media="(min-width: 1620px)">'
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverSquareby2.data.attributes.url + '" media="(min-width: 1320px)">'
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.Cover620.data.attributes.url + '" media="(min-width: 1095px)">'
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverRectangle.data.attributes.url + '" media="(min-width: 1000px)">'
-                            + '<img src="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverSupplierDefault.data.attributes.url + '" alt="MDN">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverSquareby3Full.data.attributes.url + '" media="(min-width: 1700px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverSquareby3.data.attributes.url + '" media="(min-width: 1620px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverSquareby2.data.attributes.url + '" media="(min-width: 1320px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.Cover620.data.attributes.url + '" media="(min-width: 1095px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverRectangle.data.attributes.url + '" media="(min-width: 1000px)">'
+                            + '<img src="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverSupplierDefault.data.attributes.url + '" alt="MDN">'
                         + '</picture>'
                         + '</div>'
                         + '<div class="supplier-catalog-element"> '
@@ -291,7 +291,7 @@ export default {
                         + '</div>'
                         + '<div class="link-main">'
                         + '<p>' + 'Voir le catalogue' + '</p>'
-                        + '<a href="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.DocumentSupplier.data.attributes.url + ' "><i class="fa-solid fa-arrow-right"></i>' + '</a>'
+                        + '<a href="https://strapi-z4iu.onrender.com' + catalog.attributes.DocumentSupplier.data.attributes.url + ' "><i class="fa-solid fa-arrow-right"></i>' + '</a>'
                         + '</div>'
                         + '</div>'
                         + '</div>'
@@ -315,7 +315,7 @@ export default {
             const optionse = {
                 method: 'GET',
                 maxBodyLength: Infinity,
-                url: 'https://mighty-festival-73bd3f630e.strapiapp.com/api/supplier-catalogs?sort[0]=TitleSupplier&pagination[pageSize]=50&populate=*',
+                url: 'https://strapi-z4iu.onrender.com/api/supplier-catalogs?sort[0]=TitleSupplier&pagination[pageSize]=50&populate=*',
                 headers: {
                     'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
                 }
@@ -332,12 +332,12 @@ export default {
                     '<div id="supplier-all" class="supplier-card-wrapper">'
                         + '<div class="catalog-cover">'
                         + '<picture>'
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverSquareby3Full.data.attributes.url + '" media="(min-width: 1700px)">'
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverSquareby3.data.attributes.url + '" media="(min-width: 1620px)">'
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverSquareby2.data.attributes.url + '" media="(min-width: 1320px)">'
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.Cover620.data.attributes.url + '" media="(min-width: 1095px)">'
-                            + '<source srcset="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverRectangle.data.attributes.url + '" media="(min-width: 1000px)">'
-                            + '<img src="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.CoverSupplierDefault.data.attributes.url + '" alt="MDN">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverSquareby3Full.data.attributes.url + '" media="(min-width: 1700px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverSquareby3.data.attributes.url + '" media="(min-width: 1620px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverSquareby2.data.attributes.url + '" media="(min-width: 1320px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.Cover620.data.attributes.url + '" media="(min-width: 1095px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverRectangle.data.attributes.url + '" media="(min-width: 1000px)">'
+                            + '<img src="https://strapi-z4iu.onrender.com' + catalog.attributes.CoverSupplierDefault.data.attributes.url + '" alt="MDN">'
                         + '</picture>'
                         + '</div>'
                         + '<div class="supplier-catalog-element"> '
@@ -348,7 +348,7 @@ export default {
                         + '</div>'
                         + '<div class="link-main">'
                         + '<p>' + 'Voir le catalogue' + '</p>'
-                        + '<a href="https://mighty-festival-73bd3f630e.strapiapp.com' + catalog.attributes.DocumentSupplier.data.attributes.url + ' "><i class="fa-solid fa-arrow-right"></i>' + '</a>'
+                        + '<a href="https://strapi-z4iu.onrender.com' + catalog.attributes.DocumentSupplier.data.attributes.url + ' "><i class="fa-solid fa-arrow-right"></i>' + '</a>'
                         + '</div>'
                         + '</div>'
                         + '</div>'
@@ -372,7 +372,7 @@ export default {
         const options = {
             method: 'GET',
             maxBodyLength: Infinity,
-            url: 'https://mighty-festival-73bd3f630e.strapiapp.com/api/supplier-catalogs',
+            url: 'https://strapi-z4iu.onrender.com/api/supplier-catalogs',
             headers: {
                 'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
             }
@@ -387,7 +387,7 @@ export default {
         const optionsa = {
             method: 'GET',
             maxBodyLength: Infinity,
-            url: 'https://mighty-festival-73bd3f630e.strapiapp.com/api/supplier-catalogs?sort[0]=TitleSupplier&pagination[pageSize]=50&populate=*',
+            url: 'https://strapi-z4iu.onrender.com/api/supplier-catalogs?sort[0]=TitleSupplier&pagination[pageSize]=50&populate=*',
             headers: {
                 'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
             }

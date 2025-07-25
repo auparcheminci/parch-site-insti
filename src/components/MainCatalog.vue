@@ -10,7 +10,7 @@ import axios from 'axios'
                 <!--<p>{{ catalog.attributes.Maj }}</p> -->
             </div>
             <div class="link-main" v-if="catalog?.Document?.data?.attributes?.url">
-                <a :href="`https://mighty-festival-73bd3f630e.strapiapp.com${catalog.Document.data.attributes.url}`"
+                <a :href="`https://strapi-z4iu.onrender.com${catalog.Document.data.attributes.url}`"
                     target="_blank">
                     Télécharger le catalogue
                 </a>
@@ -31,7 +31,7 @@ export default {
     const options = {
       method: 'GET',
       maxBodyLength: Infinity,
-      url: 'https://mighty-festival-73bd3f630e.strapiapp.com/api/main-catalogs?populate=*',
+      url: 'https://strapi-z4iu.onrender.com/api/main-catalogs?populate=*',
       headers: {
         Authorization: `Bearer ${import.meta.env.VITE_RENDER_KEY}`
       }

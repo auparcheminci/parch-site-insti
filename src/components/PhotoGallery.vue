@@ -19,7 +19,7 @@ export default {
         const options = {
             method: 'GET',
             maxBodyLength: Infinity,
-            url: 'https://mighty-festival-73bd3f630e.strapiapp.com/api/galerie-photos?pagination[pageSize]=500&populate=*',
+            url: 'https://strapi-z4iu.onrender.com/api/galerie-photos?pagination[pageSize]=500&populate=*',
             headers: {
                 'Authorization': `Bearer ${import.meta.env.VITE_RENDER_KEY}`
             }
