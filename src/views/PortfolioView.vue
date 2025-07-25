@@ -111,10 +111,10 @@ export default {
                 projetsList.forEach((projet) => {
                     var top = document.createElement('div');
                     top.innerHTML = '<div class="project-card">' 
-                        + '<picture><source srcset="https://strapi-z4iu.onrender.com' + projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1320px)">'
-                            + '<source srcset="https://strapi-z4iu.onrender.com' + projet.attributes.Rectangle.data.attributes.url + '" media="(min-width: 1150px)">'
-                            + '<source srcset="https://strapi-z4iu.onrender.com' +  projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1000px)">'
-                            + '<img src="https://strapi-z4iu.onrender.com' + projet.attributes.Carre.data.attributes.url + '" alt="MDN">'
+                        + '<picture><source srcset="https://strapi-z4iu.onrender.com' + projet.Carre.url + '" media="(min-width: 1320px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + projet.Rectangle.url + '" media="(min-width: 1150px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' +  projet.Carre.url + '" media="(min-width: 1000px)">'
+                            + '<img src="https://strapi-z4iu.onrender.com' + projet.Carre.url + '" alt="MDN">'
                         + '</picture>'
                         + '</div>'
                     portfoliowrapper.appendChild(top);
@@ -150,10 +150,10 @@ export default {
                 cataloglistingAll.forEach((projet) => {
                     var tre = document.createElement('div');
                     tre.innerHTML = '<div class="project-card">' 
-                        + '<picture><source srcset="https://strapi-z4iu.onrender.com' + projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1320px)">'
-                            + '<source srcset="https://strapi-z4iu.onrender.com' + projet.attributes.Rectangle.data.attributes.url + '" media="(min-width: 1150px)">'
-                            + '<source srcset="https://strapi-z4iu.onrender.com' +  projet.attributes.Carre.data.attributes.url + '" media="(min-width: 1000px)">'
-                            + '<img src="https://strapi-z4iu.onrender.com' + projet.attributes.Carre.data.attributes.url + '" alt="MDN">'
+                        + '<picture><source srcset="https://strapi-z4iu.onrender.com' + projet.Carre.url + '" media="(min-width: 1320px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' + projet.Rectangle.url + '" media="(min-width: 1150px)">'
+                            + '<source srcset="https://strapi-z4iu.onrender.com' +  projet.Carre.url + '" media="(min-width: 1000px)">'
+                            + '<img src="https://strapi-z4iu.onrender.com' + projet.Carre.url + '" alt="MDN">'
                         + '</picture>'
                         + '</div>'
                     portfoliowrapper.appendChild(tre);

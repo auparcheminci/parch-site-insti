@@ -3,7 +3,7 @@ import axios from 'axios'
 </script>
 <template>
     <div class="gallery-grid-display" v-for="photo in photos" :key="photo.id">
-        <img :src="`https://mighty-festival-73bd3f630e.strapiapp.com/` + photo.attributes.Rectangle.data.attributes.url" alt="MDN">
+        <img :src="`https://strapi-z4iu.onrender.com` + photo.attributes.Rectangle.data.attributes.url" alt="MDN">
     </div>
 </template>
 <script>
