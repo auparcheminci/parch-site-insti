@@ -3,18 +3,14 @@ import axios from 'axios'
 </script>
 <template>
     <div id="main-catalog-office-wrapper">
-        <div class="main-catalog-inside" v-for="catalog in catalogs" :key="catalog.id">
+        <div class="main-catalog-inside" v-for="article in articles" :key="article.id">
             <div class="first-part">
-                <h2>{{ catalog.Title }}</h2>
+                <h2>{{ article.title }}</h2>
                 <!-- <p>{{ catalog.attributes.Maj }}</p> -->
             </div>
             <div class="links">
                 <div class="link-main">
-                    <a v-if="catalog.attributes?.document_cha?.data?.attributes?.url"
-                        :href="`https://strapi-z4iu.onrender.com${catalog.attributes.document_cha.data.attributes.url}`"
-                        target="_blank">
-                        Télécharger le catalogue
-                    </a>
+                    
 
 
                 </div>
@@ -34,7 +30,7 @@ export default {
         const options = {
             method: 'GET',
             maxBodyLength: Infinity,
-            url: 'https://strapi-z4iu.onrender.com/api/main-office-catalogs?populate=*',
+            url: 'https://ethical-bell-7cfe17e5f3.strapiapp.com/api/articles?populate=*',
             headers: {
                 Authorization: `Bearer ${import.meta.env.VITE_RENDER_KEY}`
             }
@@ -42,7 +38,7 @@ export default {
 
         axios.request(options)
             .then((response) => {
-                this.catalogs = response.data.data  // ✅ corrected here
+                this.articles = response.data.data  // ✅ corrected here
             })
             .catch((error) => {
                 console.error('Error fetching catalogs:', error)

@@ -9,8 +9,8 @@ import axios from 'axios'
 
                 <!--<p>{{ catalog.attributes.Maj }}</p> -->
             </div>
-            <div class="link-main" v-if="catalog?.Document?.data?.attributes?.url">
-                <a :href="`https://strapi-z4iu.onrender.com${catalog.Document.data.attributes.url}`"
+            <div class="link-main" v-if="catalog?.data?.url">
+                <a :href="`https://strapi-z4iu.onrender.com${ca.Document.url}`"
                     target="_blank">
                     Télécharger le catalogue
                 </a>
