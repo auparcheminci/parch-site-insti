@@ -3,13 +3,13 @@
 //import MainOfficeCatalog from '../components/MainOfficeCatalog.vue'
 import axios from 'axios'
 import { ref, onMounted } from 'vue'
-const authors = ref([])
+const catalogues = ref([])
 
 onMounted(async () => {
   const options = {
     method: 'GET',
     maxBodyLength: Infinity,
-    url: 'https://ethical-bell-7cfe17e5f3.strapiapp.com/api/authors',
+    url: 'https://ethical-bell-7cfe17e5f3.strapiapp.com/api/catalogues',
     headers: {
       Authorization: `Bearer ${import.meta.env.VITE_RENDER_KEY}`
     }
@@ -17,18 +17,18 @@ onMounted(async () => {
 
   try {
     const response = await axios.request(options)
-    authors.value = response.data.data
+    catalogues.value = response.data.data
     console.log(response.data.data)
   } catch (error) {
-    console.error('Error fetching articles:', error)
+    console.error('Error fetching Catalogs:', error)
   }
 })
 </script>
 
 <template>
-    <div class="main-catalog-inside" v-for="author in authors" :key="author.id">
+    <div class="main-catalog-inside" v-for="catalogue in catalogues" :key="catalogue.id">
         <div class="first-part">
-            <h2>{{ author.name }}</h2>
+            <h2>{{ catalogue.Marque }}</h2>
             <!--<p>{{ catalog.attributes.Maj }}</p> -->
         </div>
         </div>
