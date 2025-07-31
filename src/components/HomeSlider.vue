@@ -9,22 +9,22 @@ const slides = ref([
   {
     title: '',
     content: '',
-    image: 'https://strapi-z4iu.onrender.com/uploads/EXP_009_9fa2018203.webp',
+    image: 'https://ethical-bell-7cfe17e5f3.media.strapiapp.com/FAC_1_27975c4616.webp',
   },
   {
     title: '',
     content: '',
-    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_SLIDE_2_0d593c003d.jpg',
+    image: 'https://ethical-bell-7cfe17e5f3.media.strapiapp.com/FAC_2_1a7444764b.webp',
   },
   {
     title: '',
     content: '',
-    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_SLIDE_3_f9a40e38c5.jpg',
+    image: 'https://ethical-bell-7cfe17e5f3.media.strapiapp.com/FAC_4_989953292d.webp',
   },
   {
     title: '',
     content: '',
-    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_SLIDE_4_bf313942f8.jpg',
+    image: 'https://ethical-bell-7cfe17e5f3.media.strapiapp.com/FAC_5_90f5d9864c.webp',
   },
 ])
 </script>
@@ -35,7 +35,8 @@ const slides = ref([
     v-for="(slide, i) in slides"
     :key="i"
     :title="slide.title"
-    :content="slide.content">
+    :content="slide.content"
+    :image="slide.image">
   </vueper-slide>
 </vueper-slides>
 </template>
