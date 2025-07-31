@@ -4,7 +4,7 @@ import axios from 'axios'
 
 <template>
   <div class="gallery-grid-display" v-for="photo in photos" :key="photo.id">
-    <img v-if="photo.Rectangle" :src="`https://strapi-z4iu.onrender.com${photo.Rectangle.url}`" alt="MDN" />
+    <img v-if="photo.Rectangle" :src="`${photo.Rectangle.url}`" alt="MDN" />
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
     const options = {
       method: 'GET',
       maxBodyLength: Infinity,
-      url: 'https://strapi-z4iu.onrender.com/api/galerie-photos?pagination[pageSize]=500&populate=*',
+      url: 'https://ethical-bell-7cfe17e5f3.strapiapp.com/api/galeries?pagination[pageSize]=500&populate=*',
       headers: {
         'Authorization': `Bearer ${token}`,
         'Accept': 'application/json'
