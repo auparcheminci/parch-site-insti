@@ -1,51 +1,37 @@
 <script setup>
+import { ref, onMounted } from 'vue'
 import axios from 'axios'
-</script>
-<template>
-    <div id="main-catalog-wrapper">
-        <div class="main-catalog-inside" v-for="catalog in catalogs" :key="catalog.id">
-            <div class="first-part">
-                <h2>{{ catalog.Title }}</h2>
 
-                <!--<p>{{ catalog.attributes.Maj }}</p> -->
-            </div>
-            <div class="link-main" v-if="catalog?.data?.url">
-                <a :href="`https://strapi-z4iu.onrender.com${ca.Document.url}`"
-                    target="_blank">
-                    Télécharger le catalogue
-                </a>
-            </div>
+const catalogs = ref([])
+const token = import.meta.env.VITE_RENDER_KEY
 
-        </div>
-    </div>
-</template>
-<script>
-
-export default {
-  data() {
-    return {
-      catalogs: []
-    }
-  },
-  mounted() {
-    const options = {
-      method: 'GET',
-      maxBodyLength: Infinity,
-      url: 'https://strapi-z4iu.onrender.com/api/main-catalogs?populate=*',
+onMounted(async () => {
+  try {
+    const res = await axios.get('https://ethical-bell-7cfe17e5f3.strapiapp.com/api/cataloguesprincipaux?populate=Document', {
       headers: {
-        Authorization: `Bearer ${import.meta.env.VITE_RENDER_KEY}`
+        Authorization: `Bearer ${token}`
       }
-    }
-
-    axios.request(options)
-      .then((response) => {
-        this.catalogs = response.data.data  // ✅ fixed path
-        // console.log(this.catalogs)
-      })
-      .catch((error) => {
-        console.error('Error fetching main catalogs:', error)
-      })
+    })
+    catalogs.value = res.data.data
+  } catch (err) {
+    console.error('Error fetching main catalogs:', err)
   }
-}
-
+})
 </script>
+
+<template>
+  <div id="main-catalog-wrapper">
+    <div class="main-catalog-inside" v-for="catalog in catalogs" :key="catalog.id">
+      <div class="first-part">
+        <h2>{{ catalog.Title }}</h2>
+        <!-- <p>{{ catalog.attributes.Maj }}</p> -->
+      </div>
+
+      <div class="link-main" v-if="catalog.Document?.url">
+        <a :href="`https://ethical-bell-7cfe17e5f3.strapiapp.com${catalog.Document.url}`" target="_blank">
+          Télécharger le catalogue
+        </a>
+      </div>
+    </div>
+  </div>
+</template>

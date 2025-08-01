@@ -1,6 +1,6 @@
 <script setup>
 //import MainCatalog from '../components/MainCatalog.vue'
-//import MainOfficeCatalog from '../components/MainOfficeCatalog.vue'
+import MainOfficeCatalog from '../components/MainOfficeCatalog.vue'
 import axios from 'axios'
 import { ref, onMounted } from 'vue'
 const catalogues = ref([])
@@ -26,10 +26,11 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div class="main-catalog-inside" v-for="catalogue in catalogues" :key="catalogue.id">
-        <div class="first-part">
-            <h2>{{ catalogue.Marque }}</h2>
-            <!--<p>{{ catalog.attributes.Maj }}</p> -->
-        </div>
-        </div>
+  <MainOfficeCatalog />
+  <div class="main-catalog-inside" v-for="catalogue in catalogues" :key="catalogue.id">
+    <div class="first-part">
+      <h2>{{ catalogue.Marque }}</h2>
+      <!--<p>{{ catalog.attributes.Maj }}</p> -->
+    </div>
+  </div>
 </template>
