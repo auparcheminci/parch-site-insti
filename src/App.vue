@@ -29,6 +29,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
     </div>
   </div>
+    <main>
+    <RouterView />
+  </main>
   <footer>
     <div id="footer-wrapper">
       <div class="footer-content">
@@ -95,15 +98,15 @@ import { RouterLink, RouterView } from 'vue-router'
           </div>
           <div class="menu-element">
             <div class="section-visible">
-              <RouterLink to="/about">Notre société</RouterLink>
+              <RouterLink to="/a-propos">Notre société</RouterLink>
               <p>Notre histoire, nos valeurs et notre différence sur le marché.</p>
             </div>
             <div class="section-visible">
-              <RouterLink to="/catalog">Nos produits</RouterLink>
+              <RouterLink to="/catalogues">Nos produits</RouterLink>
               <p>Nos gammes de produits et nos différents catalogues.</p>
             </div>
             <div class="section-visible">
-              <RouterLink to="/portfolio">Nos réalisations</RouterLink>
+              <RouterLink to="/nos-realisations">Nos réalisations</RouterLink>
               <p>Les projets que nous avons menés pour nos clients</p>
             </div>
           </div>
@@ -188,7 +191,5 @@ import { RouterLink, RouterView } from 'vue-router'
       </div>
     </section>
   </footer>
-  <main>
-    <RouterView />
-  </main>
+
 </template>

@@ -1,9 +1,3 @@
-<template>
-  <div class="gallery-grid-display" v-for="photo in photos" :key="photo.id">
-    <img v-if="photo.Rectangle" :src="`${photo.Rectangle.url}`" alt="MDN" />
-  </div>
-</template>
-
 <script setup>
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
@@ -29,3 +23,9 @@ onMounted(async () => {
   }
 })
 </script>
+
+<template>
+  <div class="gallery-grid-display" v-for="photo in photos" :key="photo.id">
+    <img v-if="photo.Rectangle" :src="`${photo.Rectangle.url}`" alt="MDN" />
+  </div>
+</template>
