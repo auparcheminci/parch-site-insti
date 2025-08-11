@@ -184,7 +184,7 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
     <section id="footer-bloc-lien-express">
       <div class="lien-express-1">
-        <RouterLink to="/catalog">Nos catalogues</RouterLink>
+        <RouterLink to="/catalogues">Nos catalogues</RouterLink>
       </div>
       <div class="lien-express-2">
         <a href="#" style="cursor: not-allowed;">accès partenaires</a>
