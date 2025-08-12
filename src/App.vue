@@ -133,12 +133,12 @@ import { RouterLink, RouterView } from 'vue-router'
           </div>
           <div class="under-menu-element">
             <div class="section-hidden">
-              <RouterLink to="/about">Mieux nous connaître</RouterLink>
+              <RouterLink to="/a-propos">Mieux nous connaître</RouterLink>
             </div>
             <div class="section-hidden">
             </div>
             <div class="section-hidden">
-              <RouterLink to="/portfolio">Découvrir notre portfolio</RouterLink>
+              <RouterLink to="/nos-realisations">Découvrir notre portfolio</RouterLink>
             </div>
           </div>
           <div class="under-menu-3d">
