@@ -23,9 +23,9 @@ onMounted(async () => {
 
 <template>
     <div id="main-catalog-office-wrapper">
-        <div class="main-catalog-inside" v-for="article in articles" :key="article.id">
+        <div class="main-catalog-inside" v-for="catalogue in catalogues" :key="catalgue.id">
             <div class="first-part">
-                <h2>{{ article.Title }}</h2>
+                <h2>{{ catalogue.Title }}</h2>
                 <!-- <p>{{ article.attributes.Maj }}</p> -->
             </div>
             <div class="links">

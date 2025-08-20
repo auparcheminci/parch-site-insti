@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
-const catalogs = ref([])
+const catalogues = ref([])
 const token = import.meta.env.VITE_RENDER_KEY
 
 onMounted(async () => {
@@ -12,7 +12,7 @@ onMounted(async () => {
         Authorization: `Bearer ${token}`
       }
     })
-    catalogs.value = res.data.data
+    catalogues.value = res.data.data
   } catch (err) {
     console.error('Error fetching main catalogs:', err)
   }
@@ -21,14 +21,14 @@ onMounted(async () => {
 
 <template>
   <div id="main-catalog-wrapper">
-    <div class="main-catalog-inside" v-for="catalog in catalogs" :key="catalog.id">
+    <div class="main-catalog-inside" v-for="catalogue in catalogues" :key="catalogue.id">
       <div class="first-part">
-        <h2>{{ catalog.Title }}</h2>
+        <h2>{{ catalogue.Title }}</h2>
         <!-- <p>{{ catalog.attributes.Maj }}</p> -->
       </div>
 
-      <div class="link-main" v-if="catalog.Document?.url">
-        <a :href="`https://ethical-bell-7cfe17e5f3.strapiapp.com${catalog.Document.url}`" target="_blank">
+      <div class="link-main" v-if="catalogue.Document?.url">
+        <a :href="`https://ethical-bell-7cfe17e5f3.strapiapp.com${catalogue.Document.url}`" target="_blank">
           Télécharger le catalogue
         </a>
       </div>
