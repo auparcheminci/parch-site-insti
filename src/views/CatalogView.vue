@@ -86,7 +86,7 @@ async function greetgamme(gamme) {
   const currentgamme = typeof gamme === "string" ? gamme : (gamme?.target?.textContent || "")
   showRemoveButton(true)
   setFilterChip(currentgamme)
-  await fetchCatalogues({ "filters[gamme][$contains]": currentgamme })
+  await fetchCatalogues({ "filters[gamme][$id]": currentgamme })
 }
 
 async function greeterase() {
