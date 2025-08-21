@@ -1,6 +1,8 @@
 <script setup>
 import { ref, computed, onMounted } from "vue"
 import axios from "axios"
+import MainOfficeCatalog from '../components/MainOfficeCatalog.vue'
+import MainCatalog from "../components/MainCatalog.vue"
 
 // --- Config ---
 const STRAPI_URL   = import.meta.env.VITE_STRAPI_URL || "https://ethical-bell-7cfe17e5f3.strapiapp.com"
@@ -201,7 +203,10 @@ const filteredList = computed(() =>
 
   <!-- Catalog content -->
   <div id="catalog-content">
-    <div id="section-fixed"></div>
+    <div id="section-fixed">
+        <MainOfficeCatalog/>
+        <MainCatalog/>
+    </div>
     <div id="wrapper-supplier-catalog">
       <div class="supplier-card-wrapper" v-for="catalogue in catalogues" :key="catalogue.id">
         <div class="catalog-cover">
