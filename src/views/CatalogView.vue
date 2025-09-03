@@ -156,16 +156,24 @@ const filteredList = computed(() =>
         <div class="filters">
           <div class="show-filter">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 21.5 21.5">
-              <path d="M13.25,7.556V18.944M7.556,13.25H18.944m4.556,0A10.25,10.25,0,1,1,13.25,3,10.25,10.25,0,0,1,23.5,13.25Z"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
-            </svg>
+                <path
+                  d="M13.25,7.556V18.944M7.556,13.25H18.944m4.556,0A10.25,10.25,0,1,1,13.25,3,10.25,10.25,0,0,1,23.5,13.25Z"
+                  transform="translate(-2.5 -2.5)"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1" />
+              </svg>
             <p>Afficher les filtres</p>
           </div>
           <div class="hide-filter">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 21.5 21.5">
-              <path d="M7.556,13.25H18.944m4.556,0A10.25,10.25,0,1,1,13.25,3,10.25,10.25,0,0,1,23.5,13.25Z"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
-            </svg>
+           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+                <path
+                  d="M8.333,15H21.667M27,15A12,12,0,1,1,15,3,12,12,0,0,1,27,15Z"
+                  transform="translate(-2.5 -2.5)"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1" />
+              </svg>
             <p>Masquer les filtres</p>
           </div>
           <div class="remove-filters">
