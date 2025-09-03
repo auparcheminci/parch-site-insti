@@ -65,22 +65,15 @@ onMounted(() => {
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 21.5 21.5">
                 <path
                   d="M13.25,7.556V18.944M7.556,13.25H18.944m4.556,0A10.25,10.25,0,1,1,13.25,3,10.25,10.25,0,0,1,23.5,13.25Z"
-                  transform="translate(-2.5 -2.5)"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1" />
+                  transform="translate(-2.5 -2.5)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
               </svg>
               <p>Afficher les filtres</p>
             </div>
 
             <div class="hide-filter-portfolio" @click="showFilter = false">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
-                <path
-                  d="M8.333,15H21.667M27,15A12,12,0,1,1,15,3,12,12,0,0,1,27,15Z"
-                  transform="translate(-2.5 -2.5)"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1" />
+                <path d="M8.333,15H21.667M27,15A12,12,0,1,1,15,3,12,12,0,0,1,27,15Z" transform="translate(-2.5 -2.5)"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
               </svg>
               <p>Masquer les filtres</p>
             </div>
@@ -120,8 +113,10 @@ onMounted(() => {
         <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="23" viewBox="0 0 30.042 31.558">
             <g transform="translate(15.021 15.779) rotate(-90)">
-              <path
-                d="M30.784,13.166,18.236.754a2.609,2.609,0,1,0-3.67,3.71L22.6,12.413H2.609a2.609,2.609,0,1,0,0,5.217H22.6l-8.035,7.948a2.609,2.609,0,1,0,3.67,3.71L30.784,16.876a2.609,2.609,0,0,0,0-3.71Z" />
+              <g transform="translate(-15.779 -15.021)">
+                <path
+                  d="M30.784,13.166,18.236.754a2.609,2.609,0,1,0-3.67,3.71L22.6,12.413H2.609a2.609,2.609,0,1,0,0,5.217H22.6l-8.035,7.948a2.609,2.609,0,1,0,3.67,3.71L30.784,16.876a2.609,2.609,0,0,0,0-3.71Z" />
+              </g>
             </g>
           </svg>
           <p>Remontez</p>
