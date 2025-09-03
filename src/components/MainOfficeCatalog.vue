@@ -2,22 +2,20 @@
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
-const strapiBase = 'https://ethical-bell-7cfe17e5f3.strapiapp.com'
+const catalogues = ref([])
 const token = import.meta.env.VITE_RENDER_KEY
 
-const catalogues = ref([])
-
 onMounted(async () => {
-    try {
-        const res = await axios.get(`${strapiBase}/api/cataloguesprincipauxbureaux`, {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        })
-        catalogues.value = res.data.data
-    } catch (error) {
-        console.error('Error fetching catalogs:', error)
-    }
+  try {
+    const res = await axios.get('https://ethical-bell-7cfe17e5f3.strapiapp.com/api/cataloguesprincipauxbureaux?populate=*', {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+    catalogues.value = res.data.data
+  } catch (err) {
+    console.error('Error fetching main catalogs:', err)
+  }
 })
 </script>
 
@@ -30,7 +28,17 @@ onMounted(async () => {
             </div>
             <div class="links">
                 <div class="link-main">
-                    <!-- à compléter -->
+                    <a v-if="catalogue.document_vest" :href="`${catalogue.document_vest.url}`" target="_blank">Chaises & bureaux
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17.249" height="16.42"
+                            viewBox="0 0 17.249 16.42">
+                            <g transform="translate(8.624 8.21)">
+                                <g transform="translate(-8.624 -8.21)">
+                                    <path
+                                        d="M16.825,7.2,9.967.412A1.426,1.426,0,1,0,7.961,2.44l4.392,4.344H1.426a1.426,1.426,0,1,0,0,2.852H12.353L7.961,13.98a1.426,1.426,0,1,0,2.006,2.028l6.858-6.784a1.426,1.426,0,0,0,0-2.028Z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
