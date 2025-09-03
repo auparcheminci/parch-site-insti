@@ -28,7 +28,7 @@ onMounted(async () => {
       </div>
       <div class="link-main">
         <a v-if="catalogue.Document" :href="`${catalogue.Document.url}`" target="_blank">Voir le catalogue
-          <svg xmlns="http://www.w3.org/2000/svg" width="17.249" height="16.42" viewBox="0 0 17.249 16.42">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17.249" fill="currentColor" height="16.42" viewBox="0 0 17.249 16.42">
             <g transform="translate(8.624 8.21)">
               <g transform="translate(-8.624 -8.21)">
                 <path

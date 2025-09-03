@@ -29,7 +29,7 @@ onMounted(async () => {
             <div class="links">
                 <div class="link-main">
                     <a v-if="catalogue.document_vest" :href="`${catalogue.document_vest.url}`" target="_blank">Chaises & bureaux
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17.249" height="16.42"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17.249" height="16.42"  fill="currentColor"
                             viewBox="0 0 17.249 16.42">
                             <g transform="translate(8.624 8.21)">
                                 <g transform="translate(-8.624 -8.21)">
