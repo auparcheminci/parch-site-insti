@@ -162,23 +162,27 @@
     .project-card {
       height: auto;
       width: auto;
-      background-color: $BLEUP;
-      color: $BDEC1;
-
+      display: flex;
+      flex-direction: column;
       img {
         width: 100%;
       }
 
-      h1 {
-        @include LatoHeavy;
-        font-size: 22px;
-        text-transform: uppercase;
-      }
+      .project-card-text {
+        background-color: $BLEUP;
+        color: $BDEC1;
+        padding: 5%;
+        h1 {
+          @include LatoHeavy;
+          font-size: 22px;
+          text-transform: uppercase;
+        }
 
-      p {
-        @include LatoLight;
-        text-transform: uppercase;
-        font-size: 16px;
+        p {
+          @include LatoLight;
+          text-transform: uppercase;
+          font-size: 12px;
+        }
       }
     }
   }
