@@ -19,7 +19,7 @@ library.add(faHandPointer)
 
 
 
-import './assets/main.css'
+import './assets/base.scss'
 
 const app = createApp(App)
 

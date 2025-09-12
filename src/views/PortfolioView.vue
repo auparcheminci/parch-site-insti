@@ -99,10 +99,7 @@ onMounted(() => {
 
     <div id="portfolio-card-section">
       <div class="project-card" v-for="projet in filteredProjets" :key="projet.id">
-        <picture>
-          <!-- 🖼️ Pas d’image dans le schéma fourni, à adapter selon ton vrai backend -->
-          <img :src="projet.Rectangle.url" :alt="projet.Title" />
-        </picture>
+        <img :src="projet.Rectangle.url" :alt="projet.Title" />
         <p>{{ projet.Title }}</p>
         <p class="category">{{ projet.Categories }}</p>
       </div>
