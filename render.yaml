@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: my-vue-app
+    name: parch-site-insti      # Change to your app's name
     env: static
     buildCommand: npm run build
     staticPublishPath: dist
