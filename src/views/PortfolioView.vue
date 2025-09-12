@@ -101,7 +101,7 @@ onMounted(() => {
       <div class="project-card" v-for="projet in filteredProjets" :key="projet.id">
         <img :src="`${projet.Rectangle?.url}`" :alt="projet.Title" />
         <div class="project-card-text">
-          <p>{{ projet.Title }}</p>
+          <h1>{{ projet.Title }}</h1>
           <p class="category">{{ projet.Categories }}</p>
         </div>
       </div>

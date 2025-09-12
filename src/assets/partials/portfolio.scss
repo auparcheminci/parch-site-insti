@@ -1,253 +1,250 @@
 #portfolio-wrapper {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 110px auto;
+  grid-row-gap: 26px;
+  justify-items: center;
+  padding-bottom: 26px;
+
+  #portfolio-filter-section {
     height: 100%;
     width: 100%;
-    display: grid;
-    grid-template-rows: 110px auto;
-    grid-row-gap: 26px;
-    justify-items: center;
-    padding-bottom: 26px;
+    background-color: $BDEC12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    #portfolio-filter-section{
-        height: 100%;
+    #element-wrapper {
+      width: calc(100% - 52px);
+      height: calc(100% - 52px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .section-filter-container-portfolio {
         width: 100%;
-        background-color: $BDEC12;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
 
-        #element-wrapper {
-            width: calc(100% - 52px);
-            height: calc(100% - 52px);
+        .title-page-portfolio {
+          @include LatoBlack;
+          font-size: 20px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: $BDEC1;
+        }
+
+        .filters-portfolio {
+          display: flex;
+          grid-template-columns: auto auto;
+          color: $BDEC1;
+          text-transform: uppercase;
+          font-size: 15px;
+          letter-spacing: 1px;
+          @include LatoRegular;
+
+          .show-filter-portfolio {
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: space-between;
 
-            .section-filter-container-portfolio {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-               
-    
-                .title-page-portfolio {
-                    @include LatoBlack;
-                    font-size: 20px;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    color: $BDEC1;
-                }
-    
-                .filters-portfolio {
-                    display: flex;
-                    grid-template-columns: auto auto;
-                    color: $BDEC1;
-                    text-transform: uppercase;
-                    font-size: 15px;
-                    letter-spacing: 1px;
-                    @include LatoRegular;
-
-                    .show-filter-portfolio {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                
-        
-                        svg {
-                            margin-right: 10px;
-                            stroke : $BDEC1;
-                            fill: $BDEC12;
-                            cursor: pointer;
-                            transition: ease 0.1s;
-                        }
-        
-                        svg:hover {
-                            fill: $BDEC1;
-                            stroke: $BDEC12;
-                            transition: ease 0.1s;
-                        }
-                    }
-        
-                    .hide-filter-portfolio {
-                        display: none;
-                        align-items: center;
-                        justify-content: space-between;
-                      
-        
-                        svg {
-                            margin-right: 10px;
-                            stroke : $BDEC1;
-                            fill: $BDEC12;
-                            cursor: pointer;
-                            transition: ease 0.1s;
-                        }
-        
-                        svg:hover {
-                            fill: $BDEC1;
-                            stroke: $BDEC12;
-                            transition: ease 0.1s;
-                        }
-                    }
-
-                    .remove-filters-portfolio {
-                        display: flex;
-                        align-items: center;
-                        justify-content: flex-end;
-                        gap: 10px;
-                        margin-left: 10px;
-                        cursor: pointer;
-
-                        #filter-selected-portfolio {
-                           
-                            p {
-                                background-color: $BDEC1;
-                                color: $BDEC12;
-                                padding: 10px;
-                                text-align: center;
-                                
-                            }
-                        }
-                    }
-                    
-                }
-            }
-    
-            .filters-to-display-portfolio {
-                display: none;
-                width: 100%;
-                justify-items: flex-start;
-                gap: 26px;
-                @include LatoRegular;
-                font-size: 15px;
-                color: $BDEC1;
-
-                .catprojet {
-                    @include LatoRegular;
-                            font-size: 15px;
-                            display: flex;
-                            align-items: center;
-                            gap: 10px;
-
-                            i {
-                                display: flex;
-                                gap: 10px;
-                                font-size: 17px;
-                                @include LatoRegular;
-                            }
-
-                            .fa-circle::before {
-                                font-family: "Font Awesome 6 Free";
-                                font-weight: 200;
-                                height: fit-content;
-                                width: fit-content;
-                                cursor: pointer;
-                                border-radius: 50%;
-                            }
-
-                            .fa-circle:hover::before {
-                               background-color: $BDEC1;
-                            }
-
-                            .fa-circle:active::before {
-                                background-color: $BDEC1;
-                            }
-                }
+            svg {
+              margin-right: 10px;
+              stroke: $BDEC1;
+              fill: $BDEC12;
+              cursor: pointer;
+              transition: ease 0.1s;
             }
 
+            svg:hover {
+              fill: $BDEC1;
+              stroke: $BDEC12;
+              transition: ease 0.1s;
+            }
+          }
+
+          .hide-filter-portfolio {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+
+            svg {
+              margin-right: 10px;
+              stroke: $BDEC1;
+              fill: $BDEC12;
+              cursor: pointer;
+              transition: ease 0.1s;
+            }
+
+            svg:hover {
+              fill: $BDEC1;
+              stroke: $BDEC12;
+              transition: ease 0.1s;
+            }
+          }
+
+          .remove-filters-portfolio {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+
+            #filter-selected-portfolio {
+              p {
+                background-color: $BDEC1;
+                color: $BDEC12;
+                padding: 10px;
+                text-align: center;
+              }
+            }
+          }
         }
+      }
 
-    
-    }
-
-    #portfolio-card-section {
-        width: calc(100% - 54px);
-        display: grid;
-        grid-column-gap: 26px;
-        grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        grid-auto-columns: 400px;
-        grid-row-gap: 26px;
-
-        .project-card {
-            height: auto;
-            width: auto;
-
-            img {
-                width: 100%;
-            }
-        }
-    }
-
-    #back-to-top {
-        position: fixed;
-        right: 20px;
-        border-radius: 10px;
-        background-color: $BDEC5;
+      .filters-to-display-portfolio {
+        display: none;
+        width: 100%;
+        justify-items: flex-start;
+        gap: 26px;
+        @include LatoRegular;
+        font-size: 15px;
         color: $BDEC1;
-        bottom: 195px;
-        width: 100px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: ease 0.2s;
 
-        #back-to-top-container {
-            a {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                text-decoration: none;
+        .catprojet {
+          @include LatoRegular;
+          font-size: 15px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
 
-                svg {
-                    fill : $BDEC1;
-                }
+          i {
+            display: flex;
+            gap: 10px;
+            font-size: 17px;
+            @include LatoRegular;
+          }
 
-                p {
-                    display: none;
-                }
-            }
+          .fa-circle::before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 200;
+            height: fit-content;
+            width: fit-content;
+            cursor: pointer;
+            border-radius: 50%;
+          }
 
+          .fa-circle:hover::before {
+            background-color: $BDEC1;
+          }
+
+          .fa-circle:active::before {
+            background-color: $BDEC1;
+          }
         }
+      }
     }
+  }
 
+  #portfolio-card-section {
+    width: calc(100% - 54px);
+    display: grid;
+    grid-column-gap: 26px;
+    //grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-columns: 400px;
+    grid-row-gap: 26px;
 
-    #back-to-top.back-to-top-hover {
-        height: 80px;
-        transition: ease 0.2s;
-        background-color: $BDEC1;
-        #back-to-top-container {
+    .project-card {
+      height: auto;
+      width: auto;
+      background-color: $BLEUP;
+      color: $BDEC1;
 
-            a {
-                text-decoration: none;
+      img {
+        width: 100%;
+      }
 
-                svg {
-                    fill : $BDEC5;
-                }
+      h1 {
+        @include LatoHeavy;
+        font-size: 22px;
+        text-transform: uppercase;
+      }
 
-                p {
-                    display: block;
-                    color: $BDEC5;
-                }
-            }
+      p {
+        @include LatoLight;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+    }
+  }
 
+  #back-to-top {
+    position: fixed;
+    right: 20px;
+    border-radius: 10px;
+    background-color: $BDEC5;
+    color: $BDEC1;
+    bottom: 195px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease 0.2s;
+
+    #back-to-top-container {
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+
+        svg {
+          fill: $BDEC1;
         }
 
+        p {
+          display: none;
+        }
+      }
+    }
+  }
 
-}
+  #back-to-top.back-to-top-hover {
+    height: 80px;
+    transition: ease 0.2s;
+    background-color: $BDEC1;
+    #back-to-top-container {
+      a {
+        text-decoration: none;
+
+        svg {
+          fill: $BDEC5;
+        }
+
+        p {
+          display: block;
+          color: $BDEC5;
+        }
+      }
+    }
+  }
 }
 
 #portfolio-wrapper.hover-filter-portfolio {
-    grid-template-rows: 150px 1fr;
+  grid-template-rows: 150px 1fr;
 
-    #portfolio-filter-section {
-        #element-wrapper {
-            .filters-to-display-portfolio {
-                display: flex;
-            }
-
-        }
-
+  #portfolio-filter-section {
+    #element-wrapper {
+      .filters-to-display-portfolio {
+        display: flex;
+      }
     }
+  }
 }
