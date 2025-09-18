@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: parch-site-insti         # Change this to your app name
+    name: parch-site-insti
     env: static
     buildCommand: npm run build
     staticPublishPath: dist
