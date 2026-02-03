@@ -2,7 +2,7 @@
 import { ref, onMounted, computed } from 'vue'
 import axios from 'axios'
 
-const strapiBase = 'https://ethical-bell-7cfe17e5f3.strapiapp.com'
+const strapiBase = 'https://strapi-z4iu.onrender.com'
 const token = import.meta.env.VITE_RENDER_KEY
 
 const projets = ref([])               // Tous les projets
