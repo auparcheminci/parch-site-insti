@@ -7,7 +7,7 @@ const token = import.meta.env.VITE_RENDER_KEY
 
 onMounted(async () => {
   try {
-    const res = await axios.get('https://ethical-bell-7cfe17e5f3.strapiapp.com/api/cataloguesprincipaux?populate=Document', {
+    const res = await axios.get('https://strapi-z4iu.onrender.com/', {
       headers: {
         Authorization: `Bearer ${token}`
       }

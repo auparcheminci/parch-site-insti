@@ -5,7 +5,7 @@ import MainOfficeCatalog from '../components/MainOfficeCatalog.vue'
 import MainCatalog from "../components/MainCatalog.vue"
 
 // --- Config ---
-const STRAPI_URL = import.meta.env.VITE_STRAPI_URL || "https://ethical-bell-7cfe17e5f3.strapiapp.com"
+const STRAPI_URL = import.meta.env.VITE_STRAPI_URL || "https://strapi-z4iu.onrender.com"
 const STRAPI_TOKEN = import.meta.env.VITE_STRAPI_TOKEN || import.meta.env.VITE_RENDER_KEY
 
 const api = axios.create({
@@ -36,31 +36,56 @@ function getMedia(media) {
 
 // Fetch catalogues
 async function fetchCatalogues(params = {}) {
-  const { data } = await api.get("/api/catalogues", {
+  const { data } = await api.get("/api/supplier-catalogs", {
     params: {
       populate: "*",
       "pagination[pageSize]": 50,
-      "sort[0]": "nomdufournisseur",
+      "sort[0]": "TitleSupplier",
       ...params
     }
   })
-  catalogues.value = data.data || []
 
-  // Populate marques & gammes if empty
-  if (!marques.value.length || !gammes.value.length) {
-    const mset = new Set()
-    const gset = new Set()
-    for (const c of catalogues.value) {
-      if (c?.marque) mset.add(c.marque)
-      if (Array.isArray(c?.gamme)) {
-        c.gamme.forEach(g => {
-          if (g) gset.add(JSON.stringify({ id: g.id, name: g.attributes?.name || g.name }))
-        })
-      }
+  // Normalize items so templates can rely on flat props (supports both flattened and Strapi { id, attributes } shapes)
+  const items = (data?.data || []).map(item => {
+    const attrs = item.attributes ?? item
+    const base = { id: item.id ?? attrs.id, ...(attrs || {}) }
 
+    // Normalize Gamme relation shapes: Gamme.data (Strapi) or Gamme (already populated)
+    if (base.Gamme?.data && Array.isArray(base.Gamme.data)) {
+      base.Gamme = base.Gamme.data.map(g => ({ id: g.id, ...(g.attributes || g) }))
+    } else if (Array.isArray(base.Gamme)) {
+      base.Gamme = base.Gamme.map(g => ({ id: g.id ?? g, ...(g.attributes || { name: g.name ?? g }) }))
     }
-    marques.value = [...mset].sort()
-    gammes.value = [...gset].map(g => JSON.parse(g))
+
+    return base
+  })
+
+  catalogues.value = items
+
+  // Populate marques & gammes (robust to different payload shapes)
+  const mset = new Set()
+  const gset = new Set()
+  for (const c of catalogues.value) {
+    const marque = c.MarqueSupplier ?? c.attributes?.MarqueSupplier
+    if (marque) mset.add(marque)
+
+    const gammeList = c.Gamme ?? c.attributes?.Gamme
+    if (Array.isArray(gammeList)) {
+      for (const g of gammeList) {
+        const gid = g.id ?? g?.data?.id
+        const gname = g.attributes?.name ?? g.name ?? g
+        if (gid || gname) gset.add(JSON.stringify({ id: gid, name: gname }))
+      }
+    }
+  }
+
+  marques.value = [...mset].sort()
+  gammes.value = [...gset].map(g => JSON.parse(g))
+
+  // Helpful debug hint when gammes are unexpectedly empty
+  if (catalogues.value.length && !gammes.value.length) {
+    // eslint-disable-next-line no-console
+    console.warn('[CatalogView] no gammes extracted — sample item:', catalogues.value[0])
   }
 }
 
@@ -86,15 +111,16 @@ async function greet(marque) {
   const currentbrand = typeof marque === "string" ? marque : (marque?.target?.textContent || "")
   showRemoveButton(true)
   setFilterChip(currentbrand)
-  await fetchCatalogues({ "filters[marque][$eq]": currentbrand })
+  await fetchCatalogues({ "filters[MarqueSupplier][$eq]": currentbrand })
 }
 
-async function greetgamme(gamme) {
-  const currentgamme = typeof gamme === "string" ? gamme : (gamme?.target?.textContent || "")
+async function greetgamme(g) {
   showRemoveButton(true)
-  setFilterChip(currentgamme)
-  await fetchCatalogues({ "filters[gamme][$eq][$id]": currentgamme })
+  setFilterChip(g.name)
+  await fetchCatalogues({ "filters[Gamme][id][$eq]": g.id })
 }
+
+
 
 async function greeterase() {
   showRemoveButton(false)
@@ -140,8 +166,8 @@ const filteredList = computed(() =>
             <input type="text" v-model="search" placeholder="Tapez le nom de la marque que vous cherchez" />
           </div>
           <div class="brand-element-full">
-            <div class="brand-element-full-each" v-for="marque in filteredList" :key="marque">
-              <i v-on:click="greet(marque)" class="fa-regular fa-circle">{{ marque }}</i>
+            <div class="brand-element-full-each" v-for="TitleSupplier in filteredList" :key="TitleSupplier">
+              <i v-on:click="greet(TitleSupplier)" class="fa-regular fa-circle">{{ TitleSupplier }}</i>
             </div>
           </div>
           <div class="save-selection">
@@ -189,8 +215,8 @@ const filteredList = computed(() =>
               <p>Cochez les cases pour ne voir apparaitre que les éléments sélectionnés</p>
             </div>
             <div class="departement-element">
-              <div class="departement-element-each" v-for="gamme in gammes" :key="gamme">
-                <i v-on:click="greetgamme(gamme)" class="fa-regular fa-circle">{{ gamme.id }}</i>
+              <div class="departement-element-each" v-for="g in gammes" :key="g.id">
+                <i @click="greetgamme(g)" class="fa-regular fa-circle">{{ g.name }}</i>
               </div>
             </div>
           </div>
@@ -217,23 +243,23 @@ const filteredList = computed(() =>
         <div class="supplier-card-wrapper" v-for="catalogue in catalogues" :key="catalogue.id">
           <div class="catalog-cover">
             <picture>
-              <source :srcset="getMedia(catalogue.coversquareby3full)" media="(min-width: 1700px)">
-              <source :srcset="getMedia(catalogue.coversquareby3)" media="(min-width: 1620px)">
-              <source :srcset="getMedia(catalogue.coversquareby2)" media="(min-width: 1320px)">
-              <source :srcset="getMedia(catalogue.cover620)" media="(min-width: 1095px)">
-              <source :srcset="getMedia(catalogue.coverrectangle)" media="(min-width: 1000px)">
-              <img :src="getMedia(catalogue.coversupplierdefault)" alt="Cover">
+              <source :srcset="getMedia(catalogue.CoverSquareby3Full)" media="(min-width: 1700px)">
+              <source :srcset="getMedia(catalogue.CoverSquareby3)" media="(min-width: 1620px)">
+              <source :srcset="getMedia(catalogue.CoverSquareby2)" media="(min-width: 1320px)">
+              <source :srcset="getMedia(catalogue.Cover620)" media="(min-width: 1095px)">
+              <source :srcset="getMedia(catalogue.CoverRectangle)" media="(min-width: 1000px)">
+              <img :src="getMedia(catalogue.CoverSupplierDefault)" alt="Cover">
             </picture>
           </div>
           <div class="supplier-catalog-element">
             <div class="supplier-catalog-inside">
               <div class="first-part">
-                <h2>{{ catalogue.nomdufournisseur }}</h2>
-                <p>{{ catalogue.annee }}</p>
+                <h2>{{ catalogue.TitleSupplier }}</h2>
+                <p>{{ catalogue.Annee }}</p>
               </div>
               <div class="link-main">
                 <p>Voir le catalogue</p>
-                <a v-if="catalogue.document" :href="getMedia(catalogue.document)" target="_blank">
+                <a v-if="catalogue.DocumentSupplier || catalogue.document" :href="getMedia(catalogue.DocumentSupplier ?? catalogue.document)" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" width="17.249" height="16.42" viewBox="0 0 17.249 16.42">
                     <g transform="translate(8.624 8.21)">
                       <g transform="translate(-8.624 -8.21)">
