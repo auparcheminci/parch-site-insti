@@ -9,22 +9,12 @@ const slides = ref([
   {
     title: '',
     content: '',
-    image: 'https://ethical-bell-7cfe17e5f3.media.strapiapp.com/FAC_1_27975c4616.webp',
+    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_SLIDE_1_0f08dfb984.jpg',
   },
   {
     title: '',
     content: '',
-    image: 'https://ethical-bell-7cfe17e5f3.media.strapiapp.com/FAC_2_1a7444764b.webp',
-  },
-  {
-    title: '',
-    content: '',
-    image: 'https://ethical-bell-7cfe17e5f3.media.strapiapp.com/FAC_4_989953292d.webp',
-  },
-  {
-    title: '',
-    content: '',
-    image: 'https://ethical-bell-7cfe17e5f3.media.strapiapp.com/FAC_5_90f5d9864c.webp',
+    image: 'https://strapi-z4iu.onrender.com/uploads/BANNIERE_SLIDE_2_0d593c003d.jpg',
   },
 ])
 </script>
