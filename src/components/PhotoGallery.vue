@@ -26,6 +26,6 @@ onMounted(async () => {
 
 <template>
   <div class="gallery-grid-display" v-for="photo in photos" :key="photo.id">
-    <img v-if="photo.Rectangle" :src="`${photo.Rectangle.url}`" alt="MDN" />
+    <img v-if="photo.Rectangle" :src="`https://strapi-z4iu.onrender.com${photo.Rectangle.url}`" alt="MDN" />
   </div>
 </template>
